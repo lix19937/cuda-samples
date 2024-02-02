@@ -1,48 +1,37 @@
 # CUDA Samples
 
-Samples for CUDA Developers which demonstrates features in CUDA Toolkit. This version supports [CUDA Toolkit 12.3](https://developer.nvidia.com/cuda-downloads).
+CUDA开发人员示例，演示CUDA Toolkit中的功能. 当前版本支持 [CUDA Toolkit 12.3](https://developer.nvidia.com/cuda-downloads).
 
-## Release Notes
+## 发布说明  
 
-This section describes the release notes for the CUDA Samples on GitHub only.
+本仓仅介绍GitHub上CUDA示例的发布说明。
 
 ### CUDA 12.3
 
-### [older versions...](./CHANGELOG.md)
+### [历史版本...](./CHANGELOG.md)
 
-## Getting Started
+### 前提  
 
-### Prerequisites
+基于你相应的平台，下载和安装 [CUDA Toolkit 12.3](https://developer.nvidia.com/cuda-downloads).
+关于cuda工具包的系统要求和安装说明, 请参考 [Linux Installation Guide](http://docs.nvidia.com/cuda/cuda-installation-guide-linux/), and the [Windows Installation Guide](http://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html).
 
-Download and install the [CUDA Toolkit 12.3](https://developer.nvidia.com/cuda-downloads) for your corresponding platform.
-For system requirements and installation instructions of cuda toolkit, please refer to the [Linux Installation Guide](http://docs.nvidia.com/cuda/cuda-installation-guide-linux/), and the [Windows Installation Guide](http://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html).
+### 获取示例  
 
-### Getting the CUDA Samples
-
-Using git clone the repository of CUDA Samples using the command below.
+使用如下命令    
 ```
 git clone https://github.com/NVIDIA/cuda-samples.git
 ```
 
-Without using git the easiest way to use these samples is to download the zip file containing the current version by clicking the "Download ZIP" button on the repo page. You can then unzip the entire archive and use the samples.
+在不使用git的情况下，使用这些示例的最简单方法是通过单击repo页面上的“下载zip”按钮下载包含当前版本的zip文件。然后，您可以解压缩整个归档文件并使用示例。
 
-## Building CUDA Samples
+## 编译示例    
 
 ### Windows
 
-The Windows samples are built using the Visual Studio IDE. Solution files (.sln) are provided for each supported version of Visual Studio, using the format:
-```
-*_vs<version>.sln - for Visual Studio <version>
-```
-Complete samples solution files exist at parent directory of the repo:
+略
 
-Each individual sample has its own set of solution files at:
-`<CUDA_SAMPLES_REPO>\Samples\<sample_dir>\`
-
-To build/examine all the samples at once, the complete solution files should be used. To build/examine a single sample, the individual sample solution files should be used.
-
-### Linux
-The Linux samples are built using makefiles. To use the makefiles, change the current directory to the sample directory you wish to build, and run make:
+### Linux   
+Linux示例是使用makefile构建的。要使用makefiles，请将当前目录更改为要构建的示例目录，然后运行make：   
 ```
 $ cd <sample_dir>
 $ make
@@ -92,7 +81,7 @@ Samples that demonstrate performance optimization.
 ### [7. libNVVM](./Samples/7_libNVVM/README.md)
 Samples that demonstrate the use of libNVVVM and NVVM IR.
 
-## Dependencies
+## 依赖  
 
 Some CUDA Samples rely on third-party applications and/or libraries, or features provided by the CUDA Toolkit and Driver, to either build or execute. These dependencies are listed below.
 
@@ -200,19 +189,18 @@ IPC (Interprocess Communication) allows processes to share device pointers.
 
 #### CUFFT
 
-CUFFT (CUDA Fast Fourier Transform) is a GPU-accelerated FFT library.
+CUFFT cuda 快速傅里叶变换.
 
 #### CURAND
 
-CURAND (CUDA Random Number Generation) is a GPU-accelerated RNG library.
+CURAND cuda 随机数生成.
 
 #### CUSPARSE
 
-CUSPARSE (CUDA Sparse Matrix) provides linear algebra subroutines used for sparse matrix calculations.
+CUSPARSE cuda 稀疏矩阵，提供用于稀疏矩阵计算的线性代数子程序.
 
 #### CUSOLVER
-
-CUSOLVER library is a high-level package based on the CUBLAS and CUSPARSE libraries. It combines three separate libraries under a single umbrella, each of which can be used independently or in concert with other toolkit libraries. The intent ofCUSOLVER is to provide useful LAPACK-like features, such as common matrix factorization and triangular solve routines for dense matrices, a sparse least-squares solver and an eigenvalue solver. In addition cuSolver provides a new refactorization library useful for solving sequences of matrices with a shared sparsity pattern.
+CUSOLVER库是一个基于CUBLAS和CUSPARSE库的高级包。它将三个独立的库组合在一个保护伞下，每个库都可以独立使用，也可以与其他工具包库协同使用。CUSOLVER的目的是提供有用的类似LAPACK的功能，例如常见的矩阵分解和密集矩阵的三角形求解例程、稀疏最小二乘解算器和特征值解算器。此外，cuSolver提供了一个新的重构库，可用于求解具有共享稀疏性模式的矩阵序列。
 
 #### NPP
 
