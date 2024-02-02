@@ -36,50 +36,57 @@ Linux示例是使用makefile构建的。要使用makefiles，请将当前目录�
 $ cd <sample_dir>
 $ make
 ```
-The samples makefiles can take advantage of certain options:
-*  **TARGET_ARCH=<arch>** - cross-compile targeting a specific architecture. Allowed architectures are x86_64, ppc64le, armv7l, aarch64.
-    By default, TARGET_ARCH is set to HOST_ARCH. On a x86_64 machine, not setting TARGET_ARCH is the equivalent of setting TARGET_ARCH=x86_64.<br/>
+示例makefile可以利用某些选项：
+
+*  **TARGET_ARCH=<arch>** - 针对特定体系结构的交叉编译。允许的体系结构有x86_64、ppc64le、armv7l和aarch64。默认情况下，TARGET_ARCH设置为HOST_ARCH。在x86_64计算机上，不设置TARGET_ARCH等同于设置TARGET_AARCH=x86_64.<br/>
 `$ make TARGET_ARCH=x86_64` <br/> `$ make TARGET_ARCH=ppc64le` <br/> `$ make TARGET_ARCH=armv7l` <br/> `$ make TARGET_ARCH=aarch64` <br/>
-    See [here](http://docs.nvidia.com/cuda/cuda-samples/index.html#cross-samples) for more details on cross platform compilation of cuda samples.
-*   **dbg=1** - build with debug symbols
+    见 [here](http://docs.nvidia.com/cuda/cuda-samples/index.html#cross-samples) 获取更多交叉编译信息.
+*   **dbg=1** - 使用调试符号生成    
     ```
     $ make dbg=1
     ```
-*   **SMS="A B ..."** - override the SM architectures for which the sample will be built, where `"A B ..."` is a space-delimited list of SM architectures. For example, to generate SASS for SM 50 and SM 60, use `SMS="50 60"`.
+*   **SMS="A B ..."** - 重写将为其构建示例的SM体系结构，其中“A B…”是SM体系结构的空格分隔列表。例如，要为SM 50和SM 60生成SASS，请使用`SMS=“50 60”`.
     ```
     $ make SMS="50 60"
     ```
 
-*  **HOST_COMPILER=<host_compiler>** - override the default g++ host compiler. See the [Linux Installation Guide](http://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#system-requirements) for a list of supported host compilers.
+*  **HOST_COMPILER=<host_compiler>** - 重写默认的g++主机编译器. 见 [Linux Installation Guide](http://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#system-requirements) 支持的主机编译器的列表.
     ```
     $ make HOST_COMPILER=g++
     ```
 
-## Samples list
+## 示例列表   
 
-### [0. Introduction](./Samples/0_Introduction/README.md)
-Basic CUDA samples for beginners that illustrate key concepts with using CUDA and CUDA runtime APIs.
+### [0. Introduction](./Samples/0_Introduction/README.md)  
 
-### [1. Utilities](./Samples/1_Utilities/README.md)
-Utility samples that demonstrate how to query device capabilities and measure GPU/CPU bandwidth.
+面向初学者的基本CUDA示例，说明了使用CUDA和CUDA运行时API的关键概念。   
 
-### [2. Concepts and Techniques](./Samples/2_Concepts_and_Techniques/README.md)
-Samples that demonstrate CUDA related concepts and common problem solving techniques.
+### [1. Utilities](./Samples/1_Utilities/README.md)   
 
-### [3. CUDA Features](./Samples/3_CUDA_Features/README.md)
-Samples that demonstrate CUDA Features (Cooperative Groups, CUDA Dynamic Parallelism, CUDA Graphs etc).
+演示如何查询设备功能和测量GPU/CPU带宽的实用程序示例。
 
-### [4. CUDA Libraries](./Samples/4_CUDA_Libraries/README.md)
-Samples that demonstrate how to use CUDA platform libraries (NPP, NVJPEG, NVGRAPH cuBLAS, cuFFT, cuSPARSE, cuSOLVER and cuRAND).
+### [2. Concepts and Techniques](./Samples/2_Concepts_and_Techniques/README.md)   
+
+演示CUDA相关概念和常见问题解决技术的示例。
+
+### [3. CUDA Features](./Samples/3_CUDA_Features/README.md)   
+
+演示CUDA特性的示例（协作组、CUDA动态并行性、CUDA图等）。   
+
+### [4. CUDA Libraries](./Samples/4_CUDA_Libraries/README.md)    
+演示如何使用CUDA平台库（NPP、NVJPEG、NVGRAPH cuBLAS、cuFFT、cuSPARSE、cuSOLVER和cuRAND）的示例。    
 
 ### [5. Domain Specific](./Samples/5_Domain_Specific/README.md)
-Samples that are specific to domain (Graphics, Finance, Image Processing).
 
-### [6. Performance](./Samples/6_Performance/README.md)
-Samples that demonstrate performance optimization.
+特定于领域（图形、金融、图像处理）的示例。   
 
-### [7. libNVVM](./Samples/7_libNVVM/README.md)
-Samples that demonstrate the use of libNVVVM and NVVM IR.
+### [6. Performance](./Samples/6_Performance/README.md)  
+
+演示性能优化的示例。  
+
+### [7. libNVVM](./Samples/7_libNVVM/README.md)  
+
+演示使用libNVVVM和NVVM IR的示例。  
 
 ## 依赖  
 
@@ -99,14 +106,13 @@ FreeImage是一个开源的图像库。FreeImage通常可以使用发行版的�
 
 要在Windows系统上设置FreeImage，请将FreeImage DLL分发提取到文件夹`../..//Common/FreeImage/Dist/x64`，使其包含.h和.lib文件。将.dll文件复制到根级别“bin/win64/Debug”和“bin/winn64/Release”文件夹。  
 
-#### Message Passing Interface
+#### MPI   
 
 MPI（消息传递接口）是一种用于在分布式进程之间进行数据通信的API。MPI编译器可以使用Linux发行版的包管理器系统进行安装。它也可以在一些在线资源中获得, [Open MPI](http://www.open-mpi.org/). Windows下, [MS-MPI SDK](https://msdn.microsoft.com/en-us/library/bb524831(v=vs.85).aspx).
 
-#### Only 64-Bit
+#### 仅支持 64位      
 
-某些示例只能在64位操作系统上运行。
-
+某些示例只能在64位操作系统上运行。    
 
 #### DirectX
 
@@ -147,7 +153,6 @@ EGL是Khronos渲染API（如OpenGL、OpenGL ES或OpenVG）与底层原生平台�
 #### EGLOutput
 
 EGLOutput是一组EGL扩展，允许EGL直接呈现到显示器上。
-
 
 #### EGLSync
 
@@ -233,15 +238,13 @@ FP16是一种16位浮点格式。1位用于符号，5位用于指数，10位用�
 
 #### C++11 CUDA
 
-NVCC support of [C++11 features](https://en.wikipedia.org/wiki/C++11).
+NVCC 支持[C++11 features](https://en.wikipedia.org/wiki/C++11).
 
-## FAQs   
-
+## FAQs    
 http://developer.nvidia.com/cuda-faq 
 http://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html   
 
-## 参考  
-
+## 参考   
 *   [CUDA Programming Guide](http://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html)
 *   [Accelerated Computing Blog](https://developer.nvidia.com/blog/?tags=accelerated-computing)
 
