@@ -83,109 +83,110 @@ Samples that demonstrate the use of libNVVVM and NVVM IR.
 
 ## 依赖  
 
-Some CUDA Samples rely on third-party applications and/or libraries, or features provided by the CUDA Toolkit and Driver, to either build or execute. These dependencies are listed below.
+一些CUDA示例依赖于第三方应用程序和/或库，或CUDA Toolkit和Driver提供的功能来构建或执行。下面列出了这些依赖关系。
 
-If a sample has a third-party dependency that is available on the system, but is not installed, the sample will waive itself at build time.
+如果某个示例具有系统上可用但未安装的第三方依赖项，则该示例将在构建时放弃自己。
 
-Each sample's dependencies are listed in its README's Dependencies section.
+每个样本的依赖项都列在其自述文件的依赖项部分中。   
 
-### Third-Party Dependencies
+### 第三方依赖  
 
-These third-party dependencies are required by some CUDA samples. If available, these dependencies are either installed on your system automatically, or are installable via your system's package manager (Linux) or a third-party website.
+某些CUDA示例需要这些第三方依赖项。如果可用，这些依赖项将自动安装在您的系统上，或者可以通过系统的软件包管理器（Linux）或第三方网站进行安装。
 
 #### FreeImage
 
-FreeImage is an open source imaging library. FreeImage can usually be installed on Linux using your distribution's package manager system. FreeImage can also be downloaded from the FreeImage website.
+FreeImage是一个开源的图像库。FreeImage通常可以使用发行版的软件包管理器系统安装在Linux上。FreeImage也可以从FreeImage网站下载。
 
-To set up FreeImage on a Windows system, extract the FreeImage DLL distribution into the folder `../../../Common/FreeImage/Dist/x64` such that it contains the .h and .lib files. Copy the .dll file to root level `bin/win64/Debug` and `bin/win64/Release` folder.
+要在Windows系统上设置FreeImage，请将FreeImage DLL分发提取到文件夹`../..//Common/FreeImage/Dist/x64`，使其包含.h和.lib文件。将.dll文件复制到根级别“bin/win64/Debug”和“bin/winn64/Release”文件夹。  
 
 #### Message Passing Interface
 
-MPI (Message Passing Interface) is an API for communicating data between distributed processes. A MPI compiler can be installed using your Linux distribution's package manager system. It is also available on some online resources, such as [Open MPI](http://www.open-mpi.org/). On Windows, to build and run MPI-CUDA applications one can install [MS-MPI SDK](https://msdn.microsoft.com/en-us/library/bb524831(v=vs.85).aspx).
+MPI（消息传递接口）是一种用于在分布式进程之间进行数据通信的API。MPI编译器可以使用Linux发行版的包管理器系统进行安装。它也可以在一些在线资源中获得, [Open MPI](http://www.open-mpi.org/). Windows下, [MS-MPI SDK](https://msdn.microsoft.com/en-us/library/bb524831(v=vs.85).aspx).
 
 #### Only 64-Bit
 
-Some samples can only be run on a 64-bit operating system.
+某些示例只能在64位操作系统上运行。
+
 
 #### DirectX
 
-DirectX is a collection of APIs designed to allow development of multimedia applications on Microsoft platforms. For Microsoft platforms, NVIDIA's CUDA Driver supports DirectX. Several CUDA Samples for Windows demonstrates CUDA-DirectX Interoperability, for building such samples one needs to install Microsoft Visual Studio 2012 or higher which provides Microsoft Windows SDK for Windows 8.
+DirectX是一组API，旨在允许在Microsoft平台上开发多媒体应用程序。对于Microsoft平台，NVIDIA的CUDA驱动程序支持DirectX。Windows的几个CUDA示例演示了CUDA DirectX互操作性，要构建此类示例，需要安装Microsoft Visual Studio 2012或更高版本，该版本提供适用于Windows 8的Microsoft Windows SDK。  
 
 #### DirectX12
 
-DirectX 12 is a collection of advanced low-level programming APIs which can reduce driver overhead, designed to allow development of multimedia applications on Microsoft platforms starting with Windows 10 OS onwards. For Microsoft platforms, NVIDIA's CUDA Driver supports DirectX. Few CUDA Samples for Windows demonstrates CUDA-DirectX12 Interoperability, for building such samples one needs to install [Windows 10 SDK or higher](https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk), with VS 2015 or VS 2017.
+DirectX 12是一个高级低级编程API的集合，可以减少驱动程序开销，旨在允许从Windows 10操作系统开始在Microsoft平台上开发多媒体应用程序。对于Microsoft平台，NVIDIA的CUDA驱动程序支持DirectX。用于Windows的少数CUDA示例演示了CUDA-DirectX12互操作性, [Windows 10 SDK or higher](https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk), with VS 2015 or VS 2017.
 
 #### OpenGL
 
-OpenGL is a graphics library used for 2D and 3D rendering. On systems which support OpenGL, NVIDIA's OpenGL implementation is provided with the CUDA Driver.
+OpenGL是一个用于二维和三维渲染的图形库。在支持OpenGL的系统上，NVIDIA的OpenGL实现提供了CUDA驱动程序。  
 
 #### OpenGL ES
 
-OpenGL ES is an embedded systems graphics library used for 2D and 3D rendering. On systems which support OpenGL ES, NVIDIA's OpenGL ES implementation is provided with the CUDA Driver.
+OpenGL ES是一个用于2D和3D渲染的嵌入式系统图形库。在支持OpenGL ES的系统上，NVIDIA的OpenGL ES实现提供了CUDA驱动程序。
 
 #### Vulkan
 
-Vulkan is a low-overhead, cross-platform 3D graphics and compute API. Vulkan targets high-performance realtime 3D graphics applications such as video games and interactive media across all platforms. On systems which support Vulkan, NVIDIA's Vulkan implementation is provided with the CUDA Driver. For building and running Vulkan applications one needs to install the [Vulkan SDK](https://www.lunarg.com/vulkan-sdk/).
+Vulkan是一款低开销、跨平台的三维图形和计算API。Vulkan的目标是高性能实时3D图形应用程序，如所有平台上的视频游戏和交互式媒体。在支持Vulkan的系统上，NVIDIA的Vulkan实现提供了CUDA驱动程序。[Vulkan SDK](https://www.lunarg.com/vulkan-sdk/).
 
 #### OpenMP
 
-OpenMP is an API for multiprocessing programming. OpenMP can be installed using your Linux distribution's package manager system. It usually comes preinstalled with GCC. It can also be found at the [OpenMP website](http://openmp.org/).
+OpenMP是一种用于多处理编程的API。OpenMP可以使用Linux发行版的软件包管理器系统进行安装。它通常预装GCC。 [OpenMP website](http://openmp.org/).
 
 #### Screen
 
-Screen is a windowing system found on the QNX operating system. Screen is usually found as part of the root filesystem.
+Screen是QNX操作系统上的一个窗口系统。屏幕通常是根文件系统的一部分。
 
 #### X11
 
-X11 is a windowing system commonly found on *-nix style operating systems. X11 can be installed using your Linux distribution's package manager, and comes preinstalled on Mac OS X systems.
+X11是一个窗口系统，常见于*-nix风格的操作系统。X11可以使用Linux发行版的软件包管理器安装，并且预装在Mac OS X系统上。
 
 #### EGL
 
-EGL is an interface between Khronos rendering APIs (such as OpenGL, OpenGL ES or OpenVG) and the underlying native platform windowing system.
+EGL是Khronos渲染API（如OpenGL、OpenGL ES或OpenVG）与底层原生平台窗口系统之间的接口。
 
 #### EGLOutput
 
-EGLOutput is a set of EGL extensions which allow EGL to render directly to the display.
+EGLOutput是一组EGL扩展，允许EGL直接呈现到显示器上。
+
 
 #### EGLSync
 
-EGLSync is a set of EGL extensions which provides sync objects that are synchronization primitive, representing events whose completion can be tested or waited upon.
+EGLSync是一组EGL扩展，它提供作为同步原语的同步对象，表示可以测试或等待其完成的事件。
 
 #### NVSCI
 
-NvSci is a set of communication interface libraries out of which CUDA interops with NvSciBuf and NvSciSync. NvSciBuf allows applications to allocate and exchange buffers in memory. NvSciSync allows applications to manage synchronization objects which coordinate when sequences of operations begin and end.
+NvSci是一组通信接口库，CUDA从中与NvSciBuf和NvSciSync进行互操作。NvSciBuf允许应用程序在内存中分配和交换缓冲区。NvSciSync允许应用程序管理同步对象，这些对象在操作序列开始和结束时进行协调。
 
 #### NvMedia
 
-NvMedia provides powerful processing of multimedia data for true hardware acceleration across NVIDIA Tegra devices. Applications leverage the NvMedia Application Programming Interface (API) to process the image and video data.
+NvMedia为NVIDIA **Tegra**设备提供强大的多媒体数据处理功能，实现真正的硬件加速。应用程序利用NvMedia应用程序编程接口（API）来处理图像和视频数据。  
 
 ### CUDA Features
 
-These CUDA features are needed by some CUDA samples. They are provided by either the CUDA Toolkit or CUDA Driver. Some features may not be available on your system.
+一些CUDA特性需要这些CUDA功能。它们由CUDA工具包或CUDA驱动程序提供。某些功能可能在您的系统上不可用。
 
 #### CUFFT Callback Routines
 
-CUFFT Callback Routines are user-supplied kernel routines that CUFFT will call when loading or storing data. These callback routines are only available on Linux x86_64 and ppc64le systems.
+CUFFT回调例程是用户提供的内核例程，CUFFT将在加载或存储数据时调用这些例程。这些回调例程仅在Linux x86_64和ppc64le系统上可用。  
 
 #### CUDA Dynamic Parallellism
 
-CDP (CUDA Dynamic Parallellism) allows kernels to be launched from threads running on the GPU. CDP is only available on GPUs with SM architecture of 3.5 or above.
+CDP（CUDA动态并行）允许从GPU上运行的线程启动内核。CDP仅在SM体系结构为3.5或更高版本的GPU上可用。
 
-#### Multi-block Cooperative Groups
+#### Multi-block Cooperative Groups   
 
-Multi Block Cooperative Groups(MBCG) extends Cooperative Groups and the CUDA programming model to express inter-thread-block synchronization. MBCG is available on GPUs with Pascal and higher architecture.
+多块协作组（MBCG）扩展了协作组和CUDA编程模型来表示线程间块同步。MBCG可在具有Pascal和更高架构的GPU上使用。
 
-#### Multi-Device Cooperative Groups
-
- Multi Device Cooperative Groups extends Cooperative Groups and the CUDA programming model enabling thread blocks executing on multiple GPUs to cooperate and synchronize as they execute. This feature is available on GPUs with Pascal and higher architecture.
+#### Multi-Device Cooperative Groups    
+多设备协作组扩展了协作组和CUDA编程模型，使在多个GPU上执行的线程块能够在执行时进行协作和同步。此功能在具有Pascal和更高体系结构的GPU上可用。
 
 #### CUBLAS
 
-CUBLAS (CUDA Basic Linear Algebra Subroutines) is a GPU-accelerated version of the BLAS library.
+CUBLAS (CUDA Basic Linear Algebra Subroutines) CUDA基本线性代数子程序.
 
 #### CUDA Interprocess Communication
 
-IPC (Interprocess Communication) allows processes to share device pointers.
+IPC (Interprocess Communication) 进程间通信，允许进程共享设备指针.
 
 #### CUFFT
 
@@ -204,55 +205,46 @@ CUSOLVER库是一个基于CUBLAS和CUSPARSE库的高级包。它将三个独立�
 
 #### NPP
 
-NPP (NVIDIA Performance Primitives) provides GPU-accelerated image, video, and signal processing functions.
+性能元件，提供gpu加速的图像, 视频, 信号处理函数.
 
 #### NVGRAPH
 
-NVGRAPH is a GPU-accelerated graph analytics library.
+一个GPU加速的图形分析库。
 
 #### NVJPEG
 
-NVJPEG library provides high-performance, GPU accelerated JPEG decoding functionality for image formats commonly used in deep learning and hyperscale multimedia applications.
+为深度学习和超大规模多媒体应用程序中常用的图像格式提供了高性能、GPU加速的JPEG解码功能。
 
 #### NVRTC
 
-NVRTC (CUDA RunTime Compilation) is a runtime compilation library for CUDA C++.
+NVRTC (CUDA RunTime Compilation) 针对CUDA C++的实时编译库 
 
-#### Stream Priorities
+#### 流优先级
 
-Stream Priorities allows the creation of streams with specified priorities. Stream Priorities is only available on GPUs with SM architecture of 3.5 or above.
+流优先级允许创建具有指定优先级的流。流优先级仅在SM体系结构为3.5或以上的GPU上可用。   
 
-#### Unified Virtual Memory
+#### 统一虚拟内存
 
-UVM (Unified Virtual Memory) enables memory that can be accessed by both the CPU and GPU without explicit copying between the two. UVM is only available on Linux and Windows systems.
+UVM (Unified Virtual Memory) 使CPU和GPU都可以访问的存储器，而无需在两者之间进行显式复制。UVM仅在Linux和Windows系统上可用。  
 
-#### 16-bit Floating Point
+#### 16-bit 浮点  
 
-FP16 is a 16-bit floating-point format. One bit is used for the sign, five bits for the exponent, and ten bits for the mantissa.
+FP16是一种16位浮点格式。1位用于符号，5位用于指数，10位用于尾数。  
 
 #### C++11 CUDA
 
 NVCC support of [C++11 features](https://en.wikipedia.org/wiki/C++11).
 
-#### CMake
+## FAQs   
 
-The libNVVM samples are built using [CMake](https://cmake.org/) 3.10 or later.
+http://developer.nvidia.com/cuda-faq 
+http://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html   
 
-## Contributors Guide
-
-We welcome your input on issues and suggestions for samples. At this time we are not accepting contributions from the public, check back here as we evolve our contribution model.
-
-We use Google C++ Style Guide for all the sources https://google.github.io/styleguide/cppguide.html
-
-## Frequently Asked Questions
-
-Answers to frequently asked questions about CUDA can be found at http://developer.nvidia.com/cuda-faq and in the [CUDA Toolkit Release Notes](http://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html).
-
-## References
+## 参考  
 
 *   [CUDA Programming Guide](http://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html)
 *   [Accelerated Computing Blog](https://developer.nvidia.com/blog/?tags=accelerated-computing)
 
-## Attributions
+@updated by lix19937
 
-*   Teapot image is obtained from [Wikimedia](https://en.wikipedia.org/wiki/File:Original_Utah_Teapot.jpg) and is licensed under the Creative Commons [Attribution-Share Alike 2.0](https://creativecommons.org/licenses/by-sa/2.0/deed.en) Generic license. The image is modified for samples use cases.
+
