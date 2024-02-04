@@ -1,4 +1,4 @@
-# CUDA Samples
+# CUDA 示例    
 
 CUDA开发人员示例，演示CUDA Toolkit中的功能. 当前版本支持 [CUDA Toolkit 12.3](https://developer.nvidia.com/cuda-downloads).
 
