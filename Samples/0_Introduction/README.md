@@ -72,7 +72,7 @@
 
 ### [simpleAttributes](./simpleAttributes)   
 
-这个CUDA Runtime API示例是一个非常基本的示例，它实现了如何使用影响L2位置的流属性。只有在计算能力8.0或更高版本上才能注意到由于使用二级访问策略窗口而导致的性能改进。  [v]    
+这个CUDA Runtime API示例是一个非常基本的示例，它实现了**如何使用影响L2位置的流属性**。只有在计算能力8.0或更高版本上才能注意到由于使用二级访问策略窗口而导致的性能改进。  [v]    
 
 ### [simpleAWBarrier](./simpleAWBarrier)
 
