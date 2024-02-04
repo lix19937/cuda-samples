@@ -1,83 +1,114 @@
-# 0. Introduction
+# 0. 说明  
 
 
 ### [asyncAPI](./asyncAPI)
-This sample illustrates the usage of CUDA events for both GPU timing and overlapping CPU and GPU execution. Events are inserted into a stream of CUDA calls. Since CUDA stream calls are asynchronous, the CPU can perform computations while GPU is executing (including DMA memcopies between the host and device). CPU can query CUDA events to determine whether GPU has completed tasks.
 
-### [c++11_cuda](./c++11_cuda)
-This sample demonstrates C++11 feature support in CUDA. It scans a input text file and prints no. of occurrences of x, y, z, w characters. 
+此示例说明了CUDA事件在GPU计时以及CPU和GPU执行重叠时的使用情况。事件被插入到CUDA调用流中。由于CUDA流调用是异步的，CPU可以在GPU执行时执行计算（包括主机和设备之间的DMA内存复制）。CPU可以查询CUDA事件以确定GPU是否已完成任务。
 
-### [clock](./clock)
-This example shows how to use the clock function to measure the performance of block of threads of a kernel accurately.
+### [c++11_cuda](./c++11_cuda) 
 
-### [clock_nvrtc](./clock_nvrtc)
-This example shows how to use the clock function using libNVRTC to measure the performance of block of threads of a kernel accurately.
+此示例演示了CUDA中对C++11特性的支持。它扫描输入文本文件并打印x、y、z、w个字符的出现次数。  
 
-### [concurrentKernels](./concurrentKernels)
-This sample demonstrates the use of CUDA streams for concurrent execution of several kernels on GPU device. It also illustrates how to introduce dependencies between CUDA streams with the new cudaStreamWaitEvent function.
+### [clock](./clock)   
 
-### [cppIntegration](./cppIntegration)
-This example demonstrates how to integrate CUDA into an existing C++ application, i.e. the CUDA entry point on host side is only a function which is called from C++ code and only the file containing this function is compiled with nvcc. It also demonstrates that vector types can be used from cpp.
+这个例子展示了如何使用时钟函数来准确地测量内核线程块的性能。
 
-### [cppOverload](./cppOverload)
-This sample demonstrates how to use C++ function overloading on the GPU.
 
-### [cudaOpenMP](./cudaOpenMP)
-This sample demonstrates how to use OpenMP API to write an application for multiple GPUs.
+### [clock_nvrtc](./clock_nvrtc)  
 
-### [fp16ScalarProduct](./fp16ScalarProduct)
-Calculates scalar product of two vectors of FP16 numbers.
+这个例子展示了如何使用libNVRTC的时钟函数来准确地测量内核线程块的性能。  
+
+### [concurrentKernels](./concurrentKernels)    
+
+此示例演示了使用CUDA流在GPU设备上并发执行几个内核。它还说明了如何使用新的cudaStreamWaitEvent函数引入CUDA流之间的依赖关系。
+
+### [cppIntegration](./cppIntegration)   
+
+此示例演示了如何将CUDA集成到现有的C++应用程序中，即主机端的CUDA入口点只是从C++代码调用的函数，并且只有包含该函数的文件才使用nvcc编译。它还演示了可以从cpp使用向量类型。
+
+### [cppOverload](./cppOverload)   
+
+此示例演示如何在GPU上使用C++函数重载。
+
+
+### [cudaOpenMP](./cudaOpenMP) 
+
+此示例演示如何使用OpenMP API为多个GPU编写应用程序。可以研究。   
+
+### [fp16ScalarProduct](./fp16ScalarProduct)  
+
+计算FP16数字的两个矢量的标量乘积。注意一处。   
+
 
 ### [matrixMul](./matrixMul)
-This sample implements matrix multiplication and is exactly the same as Chapter 6 of the programming guide. It has been written for clarity of exposition to illustrate various CUDA programming principles, not with the goal of providing the most performant generic kernel for matrix multiplication.  To illustrate GPU performance for matrix multiply, this sample also shows how to use the new CUDA 4.0 interface for CUBLAS to demonstrate high-performance performance for matrix multiplication.
+此示例实现矩阵乘法，与编程指南的第6章完全相同。它的编写是为了阐明各种CUDA编程原理，而不是为了为矩阵乘法提供最具性能的通用内核。为了说明GPU在矩阵乘法方面的性能，本示例还展示了如何使用CUBLAS的新CUDA 4.0接口来演示矩阵乘法的高性能。
 
 ### [matrixMul_nvrtc](./matrixMul_nvrtc)
-This sample implements matrix multiplication and is exactly the same as Chapter 6 of the programming guide. It has been written for clarity of exposition to illustrate various CUDA programming principles, not with the goal of providing the most performant generic kernel for matrix multiplication.  To illustrate GPU performance for matrix multiply, this sample also shows how to use the new CUDA 4.0 interface for CUBLAS to demonstrate high-performance performance for matrix multiplication.
+此示例实现矩阵乘法，与编程指南的第6章完全相同。它的编写是为了阐明各种CUDA编程原理，而不是为了为矩阵乘法提供最具性能的通用内核。为了说明GPU在矩阵乘法方面的性能，本示例还展示了如何使用CUBLAS的新CUDA 4.0接口来演示矩阵乘法的高性能。 运行时编译。    
 
-### [matrixMulDrv](./matrixMulDrv)
-This sample implements matrix multiplication and uses the new CUDA 4.0 kernel launch Driver API. It has been written for clarity of exposition to illustrate various CUDA programming principles, not with the goal of providing the most performant generic kernel for matrix multiplication. CUBLAS provides high-performance matrix multiplication.
+### [matrixMulDrv](./matrixMulDrv)  
 
-### [matrixMulDynlinkJIT](./matrixMulDynlinkJIT)
-This sample revisits matrix multiplication using the CUDA driver API. It demonstrates how to link to CUDA driver at runtime and how to use JIT (just-in-time) compilation from PTX code. It has been written for clarity of exposition to illustrate various CUDA programming principles, not with the goal of providing the most performant generic kernel for matrix multiplication. CUBLAS provides high-performance matrix multiplication.
+此示例实现矩阵乘法，并使用新的CUDA4.0内核启动驱动程序API。它的编写是为了阐明各种CUDA编程原理，而不是为了为矩阵乘法提供最具性能的通用内核。CUBLAS提供高性能的矩阵乘法。    
 
-### [mergeSort](./mergeSort)
-This sample implements a merge sort (also known as Batcher's sort), algorithms belonging to the class of sorting networks. While generally subefficient on large sequences compared to algorithms with better asymptotic algorithmic complexity (i.e. merge sort or radix sort), may be the algorithms of choice for sorting batches of short- to mid-sized (key, value) array pairs. Refer to the excellent tutorial by H. W. Lang http://www.iti.fh-flensburg.de/lang/algorithmen/sortieren/networks/indexen.htm
+### [matrixMulDynlinkJIT](./matrixMulDynlinkJIT)  
 
-### [simpleAssert](./simpleAssert)
-This CUDA Runtime API sample is a very basic sample that implements how to use the assert function in the device code. Requires Compute Capability 2.0 .
+此示例使用CUDA驱动程序API重新访问矩阵乘法。它演示了如何在运行时链接到CUDA驱动程序，以及如何使用来自PTX代码的JIT（即时）编译。它的编写是为了阐明各种CUDA编程原理，而不是为了为矩阵乘法提供最具性能的通用内核。CUBLAS提供高性能的矩阵乘法。
+
+### [mergeSort](./mergeSort)  
+此示例实现了合并排序（也称为Batcher排序），属于排序网络类的算法。虽然与具有更好渐进算法复杂度的算法（即合并排序或基数排序）相比，在大序列上通常是次有效的，但可能是对中小型（键、值）数组对的批量排序的选择算法。http://www.iti.fh-flensburg.de/lang/algorithmen/sortieren/networks/indexen.htm
+
+### [simpleAssert](./simpleAssert)  
+
+这个CUDA Runtime API示例是一个非常基本的示例，它实现了如何在设备代码中使用断言函数。需要计算能力2.0。 
 
 ### [simpleAssert_nvrtc](./simpleAssert_nvrtc)
-This CUDA Runtime API sample is a very basic sample that implements how to use the assert function in the device code. Requires Compute Capability 2.0 .
+
+这个CUDA Runtime API示例是一个非常基本的示例，它实现了如何在设备代码中使用断言函数。需要计算能力2.0。
 
 ### [simpleAtomicIntrinsics](./simpleAtomicIntrinsics)
-A simple demonstration of global memory atomic instructions.
+
+全局内存原子指令的简单演示。
+
 
 ### [simpleAtomicIntrinsics_nvrtc](./simpleAtomicIntrinsics_nvrtc)
-A simple demonstration of global memory atomic instructions.This sample makes use of NVRTC for Runtime Compilation.
 
-### [simpleAttributes](./simpleAttributes)
-This CUDA Runtime API sample is a very basic example that implements how to use the stream attributes that affect L2 locality. Performance improvement due to use of L2 access policy window can only be noticed on Compute capability 8.0 or higher.
+全局内存原子指令的简单演示。此示例使用NVRTC进行运行时编译。
+
+
+### [simpleAttributes](./simpleAttributes)   
+
+这个CUDA Runtime API示例是一个非常基本的示例，它实现了如何使用影响L2位置的流属性。只有在计算能力8.0或更高版本上才能注意到由于使用二级访问策略窗口而导致的性能改进。
 
 ### [simpleAWBarrier](./simpleAWBarrier)
-A simple demonstration of arrive wait barriers.
 
-### [simpleCallback](./simpleCallback)
-This sample implements multi-threaded heterogeneous computing workloads with the new CPU callbacks for CUDA streams and events introduced with CUDA 5.0.
+到达等待屏障的简单演示。   
 
-### [simpleCooperativeGroups](./simpleCooperativeGroups)
-This sample is a simple code that illustrates basic usage of cooperative groups within the thread block.
 
-### [simpleCubemapTexture](./simpleCubemapTexture)
-Simple example that demonstrates how to use a new CUDA 4.1 feature to support cubemap Textures in CUDA C.
+### [simpleCallback](./simpleCallback)  
+
+此示例使用CUDA5.0引入的CUDA流和事件的新CPU回调实现了多线程异构计算工作负载。  
+
+### [simpleCooperativeGroups](./simpleCooperativeGroups)   
+
+此示例是一个简单的代码，说明了线程块中协作组的基本用法。
+
+
+### [simpleCubemapTexture](./simpleCubemapTexture)  
+
+演示如何使用新的CUDA 4.1功能在CUDA C中支持立方体映射纹理的简单示例。 
 
 ### [simpleCUDA2GL](./simpleCUDA2GL)
-This sample shows how to copy CUDA image back to OpenGL using the most efficient methods.
 
-### [simpleDrvRuntime](./simpleDrvRuntime)
-A simple example which demonstrates how CUDA Driver and Runtime APIs can work together to load cuda fatbinary of vector add kernel and performing vector addition.
+此示例显示如何使用最有效的方法将CUDA图像复制回OpenGL。
 
-### [simpleHyperQ](./simpleHyperQ)
-This sample demonstrates the use of CUDA streams for concurrent execution of several kernels on devices which provide HyperQ (SM 3.5).  Devices without HyperQ (SM 2.0 and SM 3.0) will run a maximum of two kernels concurrently.
+
+### [simpleDrvRuntime](./simpleDrvRuntime)   
+
+一个简单的例子演示了CUDA驱动程序和运行时API如何协同工作来加载向量添加内核的CUDA fatbinary并执行向量添加。
+
+### [simpleHyperQ](./simpleHyperQ)  
+
+此示例演示了在提供HyperQ（SM 3.5）的设备上使用CUDA流并行执行多个内核。没有HyperQ的设备（SM 2.0和SM 3.0）最多可同时运行两个内核。  
 
 ### [simpleIPC](./simpleIPC)
 This CUDA Runtime API sample is a very basic sample that demonstrates Inter Process Communication with one process per GPU for computation.  Requires Compute Capability 3.0 or higher and a Linux Operating System, or a Windows Operating System with TCC enabled GPUs
