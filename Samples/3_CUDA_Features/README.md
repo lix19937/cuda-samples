@@ -1,76 +1,95 @@
-# 3. CUDA Features
-
+# 3. CUDA 特性  
 
 ### [bf16TensorCoreGemm](./bf16TensorCoreGemm)
-A CUDA sample demonstrating __nv_bfloat16 (e8m7) GEMM computation using the Warp Matrix Multiply and Accumulate (WMMA) API introduced with CUDA 11 in Ampere chip family tensor cores for faster matrix operations. This sample also uses async copy provided by cuda pipeline interface for gmem to shmem async loads which improves kernel performance and reduces register presssure.
+演示了__nv_bfloat16（e8m7）GEMM计算，该计算使用了Ampere芯片系列张量核中CUDA 11引入的Warp Matrix Multiply and Accumulate（WMMA）API，以实现更快的矩阵运算。此示例还使用了cuda管道接口为gmem到shmem异步加载提供的异步副本，这提高了内核性能并减少了寄存器压力。  [v]   
 
 ### [binaryPartitionCG](./binaryPartitionCG)
-This sample is a simple code that illustrates binary partition cooperative groups and reduce within the thread block.
+
+此示例是一个简单的代码，用于说明线程块内的二进制分区协作组和reduce。  [v]   
 
 ### [bindlessTexture](./bindlessTexture)
-This example demonstrates use of cudaSurfaceObject, cudaTextureObject, and MipMap support in CUDA.  A GPU with Compute Capability SM 3.0 is required to run the sample.
+
+此示例演示了CUDA中cudaSurfaceObject、cudaTextureObject和MipMap支持的使用。需要具有计算能力SM 3.0的GPU来运行示例。
 
 ### [cdpAdvancedQuicksort](./cdpAdvancedQuicksort)
-This sample demonstrates an advanced quicksort implemented using CUDA Dynamic Parallelism.  This sample requires devices with compute capability 3.5 or higher.
+
+此示例演示了使用CUDA动态并行性实现的高级快速排序。此示例需要具有3.5或更高计算能力的设备。  [v]    
 
 ### [cdpBezierTessellation](./cdpBezierTessellation)
-This sample demonstrates bezier tessellation of lines implemented using CUDA Dynamic Parallelism.  This sample requires devices with compute capability 3.5 or higher.
 
-### [cdpQuadtree](./cdpQuadtree)
-This sample demonstrates Quad Trees implemented using CUDA Dynamic Parallelism. This sample requires devices with compute capability 3.5 or higher.
+此示例演示了使用CUDA动态并行度实现的线的贝塞尔镶嵌(bezier tessellation of lines)。此示例需要具有3.5或更高计算能力的设备。
+
+### [cdpQuadtree](./cdpQuadtree)   
+
+此示例演示了使用CUDA动态并行性实现的四叉树。此示例需要具有3.5或更高计算能力的设备。
 
 ### [cdpSimplePrint](./cdpSimplePrint)
-This sample demonstrates simple printf implemented using CUDA Dynamic Parallelism.  This sample requires devices with compute capability 3.5 or higher.
+
+此示例演示了使用CUDA动态并行性实现的简单printf。此示例需要具有3.5或更高计算能力的设备。  [v]   
 
 ### [cdpSimpleQuicksort](./cdpSimpleQuicksort)
-This sample demonstrates simple quicksort implemented using CUDA Dynamic Parallelism.  This sample requires devices with compute capability 3.5 or higher.
+
+此示例演示了使用CUDA动态并行性实现的简单快速排序。此示例需要具有3.5或更高计算能力的设备。 [v]   
 
 ### [cudaCompressibleMemory](./cudaCompressibleMemory)
-This sample demonstrates the compressible memory allocation using cuMemMap API.
+
+此示例演示了使用cuMemMap API的可压缩内存分配。 [v]   
 
 ### [cudaTensorCoreGemm](./cudaTensorCoreGemm)
-CUDA sample demonstrating a GEMM computation using the Warp Matrix Multiply and Accumulate (WMMA) API introduced in CUDA 9.
 
-This sample demonstrates the use of the new CUDA WMMA API employing the Tensor Cores introduced in the Volta chip family for faster matrix operations.
+CUDA示例演示了使用CUDA 9中引入的Warp Matrix Multiply and Accumulate（WMMA）API进行GEMM计算。
 
-In addition to that, it demonstrates the use of the new CUDA function attribute cudaFuncAttributeMaxDynamicSharedMemorySize that allows the application to reserve an extended amount of shared memory than it is available by default.
+此示例演示了新CUDA WMMA API的使用，该API采用Volta芯片系列中引入的Tensor核心，以实现更快的矩阵运算。
+
+除此之外，它还演示了新的CUDA函数属性cudaFuncAttributeMaxDynamicSharedMemorySize的使用，该属性允许应用程序保留比默认情况下更多的共享内存。
 
 ### [dmmaTensorCoreGemm](./dmmaTensorCoreGemm)
-CUDA sample demonstrates double precision GEMM computation using the Double precision Warp Matrix Multiply and Accumulate (WMMA) API introduced with CUDA 11 in Ampere chip family tensor cores for faster matrix operations. This sample also uses async copy provided by cuda pipeline interface for gmem to shmem async loads which improves kernel performance and reduces register presssure. Further, this sample also demonstrates how to use cooperative groups async copy interface over a group for performing gmem to shmem async loads.
 
-### [globalToShmemAsyncCopy](./globalToShmemAsyncCopy)
-This sample implements matrix multiplication which uses asynchronous copy of data from global to shared memory when on compute capability 8.0 or higher. Also demonstrates arrive-wait barrier for synchronization.
+演示了双精度GEMM计算，该计算使用双精度Warp Matrix Multiply and Accumulate（WMMA）API在Ampere芯片族张量核中与CUDA 11一起引入，以实现更快的矩阵运算。此示例还使用了cuda pipeline 接口为gmem到shmem异步加载提供的异步副本，这提高了内核性能并减少了寄存器压力。此外，此示例还演示了如何在组上使用协作组异步复制接口来执行gmem到shmem异步加载。
 
+### [globalToShmemAsyncCopy](./globalToShmemAsyncCopy) 
+
+此示例实现矩阵乘法，当使用8.0或更高的计算能力时，该矩阵乘法使用数据从全局到共享内存的异步副本。还演示了同步的到达等待屏障。   [v]   
 ### [graphMemoryFootprint](./graphMemoryFootprint)
-This sample demonstrates how graph memory nodes re-use virtual addresses and physical memory.
+
+此示例演示了图内存节点如何重用虚拟地址和物理内存。  [v]   
 
 ### [graphMemoryNodes](./graphMemoryNodes)
-A demonstration of memory allocations and frees within CUDA graphs using Graph APIs and Stream Capture APIs.
+
+使用Graph API和Stream Capture API演示CUDA图中的内存分配和释放。  [v]   
 
 ### [immaTensorCoreGemm](./immaTensorCoreGemm)
-CUDA sample demonstrating a integer GEMM computation using the Warp Matrix Multiply and Accumulate (WMMA) API for integer introduced in CUDA 10. This sample demonstrates the use of the CUDA WMMA API employing the Tensor Cores introduced in the Volta chip family for faster matrix operations. In addition to that, it demonstrates the use of the new CUDA function attribute cudaFuncAttributeMaxDynamicSharedMemorySize that allows the application to reserve an extended amount of shared memory than it is available by default.
+
+CUDA示例演示了使用CUDA 10中引入的用于整数的Warp Matrix Multiply and Accumulate（WMMA）API进行整数GEMM计算。此示例演示了CUDA WMMA API的使用，该API采用Volta芯片系列中引入的Tensor核心来实现更快的矩阵运算。除此之外，它还演示了新的CUDA函数属性cudaFuncAttributeMaxDynamicSharedMemorySize的使用，该属性允许应用程序保留比默认情况下更多的共享内存。
 
 ### [jacobiCudaGraphs](./jacobiCudaGraphs)
-Demonstrates Instantiated CUDA Graph Update with Jacobi Iterative Method using cudaGraphExecKernelNodeSetParams() and cudaGraphExecUpdate() approach.
+
+使用cudaGraphExecKernelNodeSetParams 和 cudaGraphiExecUpdate 方法演示使用Jacobi迭代方法的实例化CUDA图更新。  
 
 ### [memMapIPCDrv](./memMapIPCDrv)
-This CUDA Driver API sample is a very basic sample that demonstrates Inter Process Communication using cuMemMap APIs with one process per GPU for computation. Requires Compute Capability 3.0 or higher and a Linux Operating System, or a Windows Operating System
+
+这个CUDA驱动程序API示例是一个非常基本的示例，它演示了使用cuMemMap API的进程间通信，每个GPU有一个进程用于计算。需要计算能力3.0或更高版本以及Linux操作系统或Windows操作系统  [v]    
 
 ### [newdelete](./newdelete)
-This sample demonstrates dynamic global memory allocation through device C++ new and delete operators and virtual function declarations available with CUDA 4.0.
+
+此示例演示了通过CUDA 4.0提供的设备C++new和delete运算符以及虚拟函数声明进行的动态全局内存分配。 
 
 ### [ptxjit](./ptxjit)
-This sample uses the Driver API to just-in-time compile (JIT) a Kernel from PTX code. Additionally, this sample demonstrates the seamless interoperability capability of the CUDA Runtime and CUDA Driver API calls.  For CUDA 5.5, this sample shows how to use cuLink* functions to link PTX assembly using the CUDA driver at runtime.
+
+此示例使用驱动程序API从PTX代码中实时编译（JIT）内核。此外，此示例演示了CUDA运行时和CUDA驱动程序API调用的无缝互操作能力。对于CUDA 5.5，此示例显示如何在运行时使用cuLink*函数使用CUDA驱动程序链接PTX程序集。
 
 ### [simpleCudaGraphs](./simpleCudaGraphs)
-A demonstration of CUDA Graphs creation, instantiation and launch using Graphs APIs and Stream Capture APIs.
+
+使用Graphs API和Stream Capture API演示CUDA Graphs的创建、实例化和启动。
 
 ### [StreamPriorities](./StreamPriorities)
-This sample demonstrates basic use of stream priorities.
+
+此示例演示流优先级的基本用法。 [v]   
 
 ### [tf32TensorCoreGemm](./tf32TensorCoreGemm)
-A CUDA sample demonstrating tf32 (e8m10) GEMM computation using the Warp Matrix Multiply and Accumulate (WMMA) API introduced with CUDA 11 in Ampere chip family tensor cores for faster matrix operations. This sample also uses async copy provided by cuda pipeline interface for gmem to shmem async loads which improves kernel performance and reduces register presssure.
 
-### [warpAggregatedAtomicsCG](./warpAggregatedAtomicsCG)
-This sample demonstrates how using Cooperative Groups (CG) to perform warp aggregated atomics to single and multiple counters, a useful technique to improve performance when many threads atomically add to a single or multiple counters.
+CUDA样本演示了tf32（e8m10）GEMM计算，该计算使用了Ampere芯片系列张量核中CUDA11引入的Warp Matrix Multiply and Accumulate（WMMA）API，以实现更快的矩阵运算。此示例还使用了cuda管道接口为gmem到shmem异步加载提供的异步副本，这提高了内核性能并减少了寄存器压力。
 
+### [warpAggregatedAtomicsCG](./warpAggregatedAtomicsCG)   
+
+此示例演示了如何使用协作组（CG）对单个和多个计数器执行 warp aggregated 原子，这是一种在多个线程原子添加到单个或多个计数器时提高性能的有用技术。
