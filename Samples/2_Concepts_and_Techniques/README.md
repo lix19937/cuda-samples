@@ -1,105 +1,139 @@
-# 2. Concepts and Techniques
+# 2. 概念和技术
 
 
-### [boxFilter](./boxFilter)
-Fast image box filter using CUDA with OpenGL rendering.
+### [boxFilter](./boxFilter)  
+
+使用CUDA和OpenGL渲染的快速图像框滤波器。
 
 ### [convolutionSeparable](./convolutionSeparable)
-This sample implements a separable convolution filter of a 2D signal with a gaussian kernel.
+
+该样本实现了具有高斯核的2D信号的可分离卷积滤波器。 
 
 ### [convolutionTexture](./convolutionTexture)
-Texture-based implementation of a separable 2D convolution with a gaussian kernel. Used for performance comparison against convolutionSeparable.
+
+基于纹理的具有高斯核的可分离2D卷积的实现。用于与卷积Separable进行性能比较。
 
 ### [cuHook](./cuHook)
-This sample demonstrates how to build and use an intercept library with CUDA. The library has to be loaded via LD_PRELOAD, e.g. LD_PRELOAD=<full_path>/libcuhook.so.1 ./cuHook
+
+此示例演示如何使用CUDA构建和使用拦截库. 通过 **LD_PRELOAD**, e.g. LD_PRELOAD=<full_path>/libcuhook.so.1 ./cuHook    [v]     
 
 ### [dct8x8](./dct8x8)
-This sample demonstrates how Discrete Cosine Transform (DCT) for blocks of 8 by 8 pixels can be performed using CUDA: a naive implementation by definition and a more traditional approach used in many libraries. As opposed to implementing DCT in a fragment shader, CUDA allows for an easier and more efficient implementation.
+
+此示例演示了如何使用CUDA对8乘8像素的块执行离散余弦变换（DCT）：根据定义，这是一种简单的实现方式，也是许多库中使用的一种更传统的方法。与在片段着色器中实现DCT相反，CUDA允许更简单、更高效的实现。
 
 ### [EGLStream_CUDA_CrossGPU](./EGLStream_CUDA_CrossGPU)
-Demonstrates CUDA and EGL Streams interop, where consumer's EGL Stream is on one GPU and producer's on other and both consumer-producer are different processes.
+
+演示CUDA和EGL Streams互操作，其中使用者的EGL Stream在一个GPU上，生产者在另一个GPU，并且使用者和生产者都是不同的进程。  
 
 ### [EGLStream_CUDA_Interop](./EGLStream_CUDA_Interop)
-Demonstrates data exchange between CUDA and EGL Streams.
 
-### [EGLSync_CUDAEvent_Interop](./EGLSync_CUDAEvent_Interop)
-Demonstrates interoperability between CUDA Event and EGL Sync/EGL Image using which one can achieve synchronization on GPU itself for GL-EGL-CUDA operations instead of blocking CPU for synchronization.
+演示CUDA和EGL Streams之间的数据交换。
 
-### [eigenvalues](./eigenvalues)
-The computation of all or a subset of all eigenvalues is an important problem in Linear Algebra, statistics, physics, and many other fields. This sample demonstrates a parallel implementation of a bisection algorithm for the computation of all eigenvalues of a tridiagonal symmetric matrix of arbitrary size with CUDA.
+### [EGLSync_CUDAEvent_Interop](./EGLSync_CUDAEvent_Interop) 
+
+演示CUDA Event和EGL Sync/EGL Image之间的互操作性，使用该互操作性可以在GPU本身上实现GL-EGL-CUDA操作的同步，而不是阻止CPU进行同步。
+
+### [eigenvalues](./eigenvalues)  
+
+所有特征值的全部或子集的计算是线性代数、统计学、物理学和许多其他领域的一个重要问题。该示例演示了使用CUDA计算任意大小的三对角对称矩阵的所有特征值的平分算法的并行实现。
 
 ### [FunctionPointers](./FunctionPointers)
-This sample illustrates how to use function pointers and implements the Sobel Edge Detection filter for 8-bit monochrome images.
+
+此示例说明了如何使用函数指针并实现8位单色图像的Sobel边缘检测滤波器。  [v]   
 
 ### [histogram](./histogram)
-This sample demonstrates efficient implementation of 64-bin and 256-bin histogram.
+
+此示例演示了64位和256位直方图的有效实现。 [v]    
 
 ### [imageDenoising](./imageDenoising)
-This sample demonstrates two adaptive image denoising techniques: KNN and NLM, based on computation of both geometric and color distance between texels. While both techniques are implemented in the DirectX SDK using shaders, massively speeded up variation of the latter technique, taking advantage of shared memory, is implemented in addition to DirectX counterparts.
+
+该示例演示了两种自适应图像去噪技术：KNN和NLM，基于纹理元素之间的几何距离和颜色距离的计算。虽然这两种技术都是在DirectX SDK中使用着色器实现的，但除了DirectX对应技术之外，还利用共享内存实现了后一种技术的大幅加速变体。
 
 ### [inlinePTX](./inlinePTX)
-A simple test application that demonstrates a new CUDA 4.0 ability to embed PTX in a CUDA kernel.
+
+一个简单的测试应用程序，展示了CUDA 4.0在CUDA内核中嵌入PTX的新功能。 [v]   
 
 ### [inlinePTX_nvrtc](./inlinePTX_nvrtc)
-A simple test application that demonstrates a new CUDA 4.0 ability to embed PTX in a CUDA kernel.
+
+一个简单的测试应用程序，展示了CUDA 4.0在CUDA内核中嵌入PTX的新功能。 [v]   
 
 ### [interval](./interval)
-Interval arithmetic operators example.  Uses various C++ features (templates and recursion).  The recursive mode requires Compute SM 2.0 capabilities.
+
+区间算术运算符示例。使用各种C++功能（模板和递归）。递归模式需要Compute SM 2.0功能。
 
 ### [MC_EstimatePiInlineP](./MC_EstimatePiInlineP)
-This sample uses Monte Carlo simulation for Estimation of Pi (using inline PRNG).  This sample also uses the NVIDIA CURAND library.
+
+此示例使用蒙特卡罗模拟来估计Pi（使用内联PRNG）。此示例还使用NVIDIA CURAND库。
 
 ### [MC_EstimatePiInlineQ](./MC_EstimatePiInlineQ)
-This sample uses Monte Carlo simulation for Estimation of Pi (using inline QRNG).  This sample also uses the NVIDIA CURAND library.
+
+此示例使用蒙特卡罗模拟来估计Pi（使用内联QRNG）。此示例还使用NVIDIA CURAND库。
 
 ### [MC_EstimatePiP](./MC_EstimatePiP)
-This sample uses Monte Carlo simulation for Estimation of Pi (using batch PRNG).  This sample also uses the NVIDIA CURAND library.
+
+此示例使用蒙特卡罗模拟来估计Pi（使用批处理PRNG）。此示例还使用NVIDIA CURAND库。
 
 ### [MC_EstimatePiQ](./MC_EstimatePiQ)
-This sample uses Monte Carlo simulation for Estimation of Pi (using batch QRNG).  This sample also uses the NVIDIA CURAND library.
+
+此示例使用蒙特卡罗模拟来估计Pi（使用批QRNG）。此示例还使用NVIDIA CURAND库。
 
 ### [MC_SingleAsianOptionP](./MC_SingleAsianOptionP)
-This sample uses Monte Carlo to simulate Single Asian Options using the NVIDIA CURAND library.
 
-### [particles](./particles)
-This sample uses CUDA to simulate and visualize a large set of particles and their physical interaction.  Adding "-particles=<N>" to the command line will allow users to set # of particles for simulation.  This example implements a uniform grid data structure using either atomic operations or a fast radix sort from the Thrust library
+此示例使用蒙特卡罗模拟使用NVIDIA CURAND库的Single Asian Options。
+
+### [particles](./particles) 
+
+此示例使用CUDA来模拟和可视化一大组粒子及其物理相互作用。在命令行中添加“-particles=<N>”将允许用户设置模拟的粒子数。此示例使用原子运算或Thrust库中的快速基数排序来实现统一的网格数据结构
 
 ### [radixSortThrust](./radixSortThrust)
-This sample demonstrates a very fast and efficient parallel radix sort uses Thrust library. The included RadixSort class can sort either key-value pairs (with float or unsigned integer keys) or keys only.
+
+此示例演示了使用Thrust库的一种非常快速高效的并行基数排序。包含的RadixSort类可以对键值对（使用浮点或无符号整数键）或仅对键进行排序。  [v]    
 
 ### [reduction](./reduction)
-A parallel sum reduction that computes the sum of a large arrays of values. This sample demonstrates several important optimization strategies for Data-Parallel Algorithms like reduction using shared memory, __shfl_down_sync, __reduce_add_sync and cooperative_groups reduce.
 
-### [reductionMultiBlockCG](./reductionMultiBlockCG)
-This sample demonstrates single pass reduction using Multi Block Cooperative Groups.  This sample requires devices with compute capability 6.0 or higher having compute preemption.
+一种并行求和约简，用于计算大型值数组的和。此示例演示了数据并行算法的几个重要优化策略，如使用共享内存减少、__shfl_down_sync、__reduce_add_sync和cooperative_groups-reduce。  [v]   
+
+### [reductionMultiBlockCG](./reductionMultiBlockCG) 
+
+此示例演示了使用多块协作组的单程规约。此示例要求具有6.0或更高计算能力的设备具有计算抢占权。  [v]    
 
 ### [scalarProd](./scalarProd)
-This sample calculates scalar products of a given set of input vector pairs.
+
+此示例计算给定一组输入向量对的标量乘积。   [v]    
 
 ### [scan](./scan)
-This example demonstrates an efficient CUDA implementation of parallel prefix sum, also known as "scan".  Given an array of numbers, scan computes a new array in which each element is the sum of all the elements before it in the input array.
+
+此示例演示了并行前缀和的高效CUDA实现，也称为“扫描”。给定一个数字数组，scan计算一个新数组，其中每个元素都是输入数组中它之前的所有元素的总和。   [v]    
 
 ### [segmentationTreeThrust](./segmentationTreeThrust)
-This sample demonstrates an approach to the image segmentation trees construction.  This method is based on Boruvka's MST algorithm.
+
+此示例演示了一种构建图像分割树的方法。该方法基于Boruvka的MST算法。 [v]    
 
 ### [shfl_scan](./shfl_scan)
-This example demonstrates how to use the shuffle intrinsic __shfl_up_sync to perform a scan operation across a thread block. 
+
+此示例演示如何使用shuffle内在__shfl_up_sync在线程块上执行扫描操作。 [v]   
 
 ### [sortingNetworks](./sortingNetworks)
-This sample implements bitonic sort and odd-even merge sort (also known as Batcher's sort), algorithms belonging to the class of sorting networks. While generally subefficient, for large sequences compared to algorithms with better asymptotic algorithmic complexity (i.e. merge sort or radix sort), this may be the preferred algorithms of choice for sorting batches of short-sized to mid-sized (key, value) array pairs. Refer to an excellent tutorial by H. W. Lang http://www.iti.fh-flensburg.de/lang/algorithmen/sortieren/networks/indexen.htm
+
+此示例实现了属于排序网络类别的双调排序和奇偶合并排序（也称为Batcher排序）。虽然通常效率较低，但与具有更好渐进算法复杂性的算法（即合并排序或基数排序）相比，对于大序列，这可能是排序从短到中（键、值）数组对的批量的首选算法。 http://www.iti.fh-flensburg.de/lang/algorithmen/sortieren/networks/indexen.htm    [v]    
 
 ### [streamOrderedAllocation](./streamOrderedAllocation)
-This sample demonstrates stream ordered memory allocation on a GPU using cudaMallocAsync and cudaMemPool family of APIs.
+
+此示例演示了使用cudaMallocAsync和cudaMemPool系列API在GPU上进行流顺序内存分配。 [v]   
 
 ### [streamOrderedAllocationIPC](./streamOrderedAllocationIPC)
-This sample demonstrates IPC pools of stream ordered memory allocated using cudaMallocAsync and cudaMemPool family of APIs.
+
+此示例演示了使用cudaMallocAsync和cudaMemPool系列API分配的流序内存的IPC池。 [v]    
 
 ### [streamOrderedAllocationP2P](./streamOrderedAllocationP2P)
-This sample demonstrates peer-to-peer access of stream ordered memory allocated using cudaMallocAsync and cudaMemPool family of APIs.
+
+此示例演示了使用cudaMallocAsync和cudaMemPool系列API分配的流序内存的p2p访问。 [v]    
 
 ### [threadFenceReduction](./threadFenceReduction)
-This sample shows how to perform a reduction operation on an array of values using the thread Fence intrinsic to produce a single value in a single kernel (as opposed to two or more kernel calls as shown in the "reduction" CUDA Sample).  Single-pass reduction requires global atomic instructions (Compute Capability 2.0 or later) and the _threadfence() intrinsic (CUDA 2.2 or later).
 
-### [threadMigration](./threadMigration)
-Simple program illustrating how to the CUDA Context Management API and uses the new CUDA 4.0 parameter passing and CUDA launch API.  CUDA contexts can be created separately and attached independently to different threads.
+此示例显示如何使用线程Fence内在函数对值数组执行归约操作，以在单个内核中生成单个值（而不是“归约”CUDA示例中所示的两个或多个内核调用）。单程还原需要全局原子指令（Compute Capability 2.0或更高版本）和_threadfence（）内在指令（CUDA 2.2或更高级别）。 [v]    
+
+### [threadMigration](./threadMigration)  
+
+简单的程序说明如何使用CUDA上下文管理API并使用新的CUDA 4.0参数传递和CUDA启动API。CUDA上下文可以单独创建，并独立附加到不同的线程。 [v]    
 
