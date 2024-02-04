@@ -3,7 +3,7 @@
 
 ### [asyncAPI](./asyncAPI)
 
-此示例说明了CUDA事件在GPU计时以及CPU和GPU执行重叠时的使用情况。事件被插入到CUDA调用流中。由于CUDA流调用是异步的，**CPU可以在GPU执行时执行计算（包括主机和设备之间的DMA内存复制）**。CPU可以查询CUDA事件以确定GPU是否已完成任务。  - [x]    
+此示例说明了CUDA事件在GPU计时以及CPU和GPU执行重叠时的使用情况。事件被插入到CUDA调用流中。由于CUDA流调用是异步的，**CPU可以在GPU执行时执行计算（包括主机和设备之间的DMA内存复制）**。CPU可以查询CUDA事件以确定GPU是否已完成任务。  [v]    
 
 ### [c++11_cuda](./c++11_cuda) 
 
