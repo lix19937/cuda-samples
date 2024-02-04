@@ -3,7 +3,7 @@
 
 ### [asyncAPI](./asyncAPI)
 
-此示例说明了CUDA事件在GPU计时以及CPU和GPU执行重叠时的使用情况。事件被插入到CUDA调用流中。由于CUDA流调用是异步的，CPU可以在GPU执行时执行计算（包括主机和设备之间的DMA内存复制）。CPU可以查询CUDA事件以确定GPU是否已完成任务。
+此示例说明了CUDA事件在GPU计时以及CPU和GPU执行重叠时的使用情况。事件被插入到CUDA调用流中。由于CUDA流调用是异步的，**CPU可以在GPU执行时执行计算（包括主机和设备之间的DMA内存复制）**。CPU可以查询CUDA事件以确定GPU是否已完成任务。  [x]    
 
 ### [c++11_cuda](./c++11_cuda) 
 
@@ -11,8 +11,7 @@
 
 ### [clock](./clock)   
 
-这个例子展示了如何使用时钟函数来准确地测量内核线程块的性能。
-
+这个例子展示了如何**使用时钟函数来准确地测量内核线程块的性能**。   
 
 ### [clock_nvrtc](./clock_nvrtc)  
 
@@ -20,7 +19,7 @@
 
 ### [concurrentKernels](./concurrentKernels)    
 
-此示例演示了使用CUDA流在GPU设备上并发执行几个内核。它还说明了如何使用新的cudaStreamWaitEvent函数引入CUDA流之间的依赖关系。
+此示例演示了**使用CUDA流在GPU设备上并发执行几个kernel**。它还说明了如何使用新的cudaStreamWaitEvent函数引入CUDA流之间的依赖关系。
 
 ### [cppIntegration](./cppIntegration)   
 
@@ -28,8 +27,7 @@
 
 ### [cppOverload](./cppOverload)   
 
-此示例演示如何在GPU上使用C++函数重载。
-
+此示例演示如何在GPU上使用C++函数重载。  
 
 ### [cudaOpenMP](./cudaOpenMP) 
 
@@ -37,14 +35,13 @@
 
 ### [fp16ScalarProduct](./fp16ScalarProduct)  
 
-计算FP16数字的两个矢量的标量乘积。注意一处。   
-
+计算FP16数字的两个矢量的标量乘积。注意计算溢出。    
 
 ### [matrixMul](./matrixMul)
 此示例实现矩阵乘法，与编程指南的第6章完全相同。它的编写是为了阐明各种CUDA编程原理，而不是为了为矩阵乘法提供最具性能的通用内核。为了说明GPU在矩阵乘法方面的性能，本示例还展示了如何使用CUBLAS的新CUDA 4.0接口来演示矩阵乘法的高性能。
 
 ### [matrixMul_nvrtc](./matrixMul_nvrtc)
-此示例实现矩阵乘法，与编程指南的第6章完全相同。它的编写是为了阐明各种CUDA编程原理，而不是为了为矩阵乘法提供最具性能的通用内核。为了说明GPU在矩阵乘法方面的性能，本示例还展示了如何使用CUBLAS的新CUDA 4.0接口来演示矩阵乘法的高性能。 运行时编译。    
+此示例实现矩阵乘法，与编程指南的第6章完全相同。它的编写是为了阐明各种CUDA编程原理，而不是为了为矩阵乘法提供最具性能的通用内核。为了说明GPU在矩阵乘法方面的性能，本示例还展示了如何使用CUBLAS的新CUDA 4.0接口来演示矩阵乘法的高性能。 **运行时编译**。      
 
 ### [matrixMulDrv](./matrixMulDrv)  
 
@@ -72,8 +69,7 @@
 
 ### [simpleAtomicIntrinsics_nvrtc](./simpleAtomicIntrinsics_nvrtc)
 
-全局内存原子指令的简单演示。此示例使用NVRTC进行运行时编译。
-
+全局内存原子指令的简单演示。此示例使用NVRTC进行运行时编译。  
 
 ### [simpleAttributes](./simpleAttributes)   
 
@@ -83,15 +79,13 @@
 
 到达等待屏障的简单演示。   
 
-
 ### [simpleCallback](./simpleCallback)  
 
 此示例使用CUDA5.0引入的CUDA流和事件的新CPU回调实现了多线程异构计算工作负载。  
 
 ### [simpleCooperativeGroups](./simpleCooperativeGroups)   
 
-此示例是一个简单的代码，说明了线程块中协作组的基本用法。
-
+此示例是一个简单的代码，说明了线程块中协作组的基本用法。  
 
 ### [simpleCubemapTexture](./simpleCubemapTexture)  
 
@@ -99,8 +93,7 @@
 
 ### [simpleCUDA2GL](./simpleCUDA2GL)
 
-此示例显示如何使用最有效的方法将CUDA图像复制回OpenGL。
-
+此示例显示如何使用最有效的方法将CUDA图像复制回OpenGL。  
 
 ### [simpleDrvRuntime](./simpleDrvRuntime)   
 
@@ -111,83 +104,110 @@
 此示例演示了在提供HyperQ（SM 3.5）的设备上使用CUDA流并行执行多个内核。没有HyperQ的设备（SM 2.0和SM 3.0）最多可同时运行两个内核。  
 
 ### [simpleIPC](./simpleIPC)
-This CUDA Runtime API sample is a very basic sample that demonstrates Inter Process Communication with one process per GPU for computation.  Requires Compute Capability 3.0 or higher and a Linux Operating System, or a Windows Operating System with TCC enabled GPUs
+
+这个CUDA Runtime API示例是一个非常基本的示例，它演示了每个GPU有一个进程用于计算的进程间通信。需要计算能力3.0或更高版本和Linux操作系统，或具有启用TCC的GPU的Windows操作系统
 
 ### [simpleLayeredTexture](./simpleLayeredTexture)
-Simple example that demonstrates how to use a new CUDA 4.0 feature to support layered Textures in CUDA C.
 
-### [simpleMPI](./simpleMPI)
-Simple example demonstrating how to use MPI in combination with CUDA.
+演示如何使用新的CUDA 4.0功能在CUDA C中支持分层纹理的简单示例。  
+
+### [simpleMPI](./simpleMPI)  
+
+演示如何将MPI与CUDA结合使用的简单示例。
 
 ### [simpleMultiCopy](./simpleMultiCopy)
-Supported in GPUs with Compute Capability 1.1, overlapping compute with one memcopy is possible from the host system.  For Quadro and Tesla GPUs with Compute Capability 2.0, a second overlapped copy operation in either direction at full speed is possible (PCI-e is symmetric).  This sample illustrates the usage of CUDA streams to achieve overlapping of kernel execution with data copies to and from the device.
+
+在具有计算能力1.1的GPU中支持，主机系统可以使用一个memcopy进行重叠计算。对于具有Compute Capability 2.0的Quadro和Tesla GPU，可以全速在任一方向进行第二次重叠复制操作（PCI-e是对称的）。此示例说明了使用CUDA流来实现内核执行与设备之间的数据副本的重叠。
 
 ### [simpleMultiGPU](./simpleMultiGPU)
-This application demonstrates how to use the new CUDA 4.0 API for CUDA context management and multi-threaded access to run CUDA kernels on multiple-GPUs.
+
+此应用程序演示如何使用新的CUDA 4.0 API进行CUDA上下文管理和多线程访问，以便在多个GPU上运行CUDA内核。  
 
 ### [simpleOccupancy](./simpleOccupancy)
-This sample demonstrates the basic usage of the CUDA occupancy calculator and occupancy-based launch configurator APIs by launching a kernel with the launch configurator, and measures the utilization difference against a manually configured launch.
+
+此示例通过使用启动配置器启动内核来演示CUDA占用率计算器和基于占用率的启动配置器API的基本用法，并测量与手动配置的启动的利用率差异。  
 
 ### [simpleP2P](./simpleP2P)
-This application demonstrates CUDA APIs that support Peer-To-Peer (P2P) copies, Peer-To-Peer (P2P) addressing, and Unified Virtual Memory Addressing (UVA) between multiple GPUs. In general, P2P is supported between two same GPUs with some exceptions, such as some Tesla and Quadro GPUs.
+
+此应用程序演示了CUDA API，这些API支持多个GPU之间的对等（P2P）拷贝、对等（对等）寻址和统一虚拟内存寻址（UVA）。一般来说，P2P在两个相同的GPU之间得到支持，但也有一些例外，例如一些特斯拉和Quadro GPU。
 
 ### [simplePitchLinearTexture](./simplePitchLinearTexture)
-Use of Pitch Linear Textures
+
+间距线性纹理的使用
 
 ### [simplePrintf](./simplePrintf)
-This basic CUDA Runtime API sample demonstrates how to use the printf function in the device code.
+
+这个基本的CUDARuntime API示例演示了如何在设备代码中使用printf函数。
 
 ### [simpleSeparateCompilation](./simpleSeparateCompilation)
-This sample demonstrates a CUDA 5.0 feature, the ability to create a GPU device static library and use it within another CUDA kernel.  This example demonstrates how to pass in a GPU device function (from the GPU device static library) as a function pointer to be called.  This sample requires devices with compute capability 2.0 or higher.
+
+此示例演示了CUDA 5.0功能，即创建GPU设备静态库并在另一个CUDA内核中使用它的能力。此示例演示如何传入GPU设备函数（来自GPU设备静态库）作为要调用的函数指针。此示例需要具有2.0或更高计算能力的设备。
 
 ### [simpleStreams](./simpleStreams)
-This sample uses CUDA streams to overlap kernel executions with memory copies between the host and a GPU device.  This sample uses a new CUDA 4.0 feature that supports pinning of generic host memory.  Requires Compute Capability 2.0 or higher.
+
+此示例使用CUDA流将内核执行与主机和GPU设备之间的内存副本重叠。此示例使用了一个新的CUDA 4.0功能，该功能支持固定通用主机内存。
 
 ### [simpleSurfaceWrite](./simpleSurfaceWrite)
-Simple example that demonstrates the use of 2D surface references (Write-to-Texture)
+
+演示2D曲面引用使用的简单示例（写入纹理）
 
 ### [simpleTemplates](./simpleTemplates)
-This sample is a templatized version of the template project. It also shows how to correctly templatize dynamically allocated shared memory arrays.
+
+此示例是模板项目的模板化版本。它还展示了如何正确地将动态分配的共享内数组模板化。
 
 ### [simpleTemplates_nvrtc](./simpleTemplates_nvrtc)
-This sample is a templatized version of the template project. It also shows how to correctly templatize dynamically allocated shared memory arrays.
+
+此示例是模板项目的模板化版本。它还展示了如何正确地将动态分配的共享内存数组模板化。  
 
 ### [simpleTexture](./simpleTexture)
-Simple example that demonstrates use of Textures in CUDA.
+
+演示在CUDA中使用纹理的简单示例。
+
 
 ### [simpleTexture3D](./simpleTexture3D)
-Simple example that demonstrates use of 3D Textures in CUDA.
+
+演示在CUDA中使用3D纹理的简单示例。
 
 ### [simpleTextureDrv](./simpleTextureDrv)
-Simple example that demonstrates use of Textures in CUDA.  This sample uses the new CUDA 4.0 kernel launch Driver API.
+
+演示在CUDA中使用纹理的简单示例。此示例使用新的CUDA4.0内核启动驱动程序API。
 
 ### [simpleVoteIntrinsics](./simpleVoteIntrinsics)
-Simple program which demonstrates how to use the Vote (__any_sync, __all_sync) intrinsic instruction in a CUDA kernel.
 
-### [simpleVoteIntrinsics_nvrtc](./simpleVoteIntrinsics_nvrtc)
-Simple program which demonstrates how to use the Vote (any, all) intrinsic instruction in a CUDA kernel with runtime compilation using NVRTC APIs. Requires Compute Capability 2.0 or higher.
+演示如何在CUDA内核中使用Vote（__any_sync，__all_sync）内在指令的简单程序。
 
-### [simpleZeroCopy](./simpleZeroCopy)
-This sample illustrates how to use Zero MemCopy, kernels can read and write directly to pinned system memory.
+### [simpleVoteIntrinsics_nvrtc](./simpleVoteIntrinsics_nvrtc)  
+
+一个简单的程序，演示如何在CUDA内核中使用Vote（任意，全部）内在指令，并使用NVRTC API进行运行时编译。需要计算能力2.0或更高版本。
+
+### [simpleZeroCopy](./simpleZeroCopy) 
+
+这个示例演示了如何使用Zero-MemCopy，内核可以直接读取和写入锁页内存。  
 
 ### [systemWideAtomics](./systemWideAtomics)
-A simple demonstration of system wide atomic instructions.
+
+系统范围原子指令的简单演示。
 
 ### [template](./template)
-A trivial template project that can be used as a starting point to create new CUDA projects.
+
+一个琐碎的模板项目，可以作为创建新CUDA项目的起点。
 
 ### [UnifiedMemoryStreams](./UnifiedMemoryStreams)
-This sample demonstrates the use of OpenMP and streams with Unified Memory on a single GPU.
+
+此示例演示了在单个GPU上使用OpenMP和带有统一内存的流。
 
 ### [vectorAdd](./vectorAdd)
-This CUDA Runtime API sample is a very basic sample that implements element by element vector addition. It is the same as the sample illustrating Chapter 3 of the programming guide with some additions like error checking.
+
+这个CUDA运行时API示例是一个非常基本的示例，它实现逐元素的向量相加。它与编程指南第3章的示例相同，添加了一些内容，如错误检查。
 
 ### [vectorAdd_nvrtc](./vectorAdd_nvrtc)
-This CUDA Driver API sample uses NVRTC for runtime compilation of vector addition kernel. Vector addition kernel demonstrated is the same as the sample illustrating Chapter 3 of the programming guide.
+
+此CUDA驱动程序API示例使用NVRTC进行向量加法内核的运行时编译。演示的矢量加法内核与编程指南第3章的示例相同。  
 
 ### [vectorAddDrv](./vectorAddDrv)
-This Vector Addition sample is a basic sample that is implemented element by element.  It is the same as the sample illustrating Chapter 3 of the programming guide with some additions like error checking.   This sample also uses the new CUDA 4.0 kernel launch Driver API.
 
-### [vectorAddMMAP](./vectorAddMMAP)
-This sample replaces the device allocation in the vectorAddDrv sample with cuMemMap-ed allocations.  This sample demonstrates that the cuMemMap api allows the user to specify the physical properties of their memory while retaining the contiguous nature of their access, thus not requiring a change in their program structure.
+此矢量相加样本是逐元素实现的基本样本。它与编程指南第3章的示例相同，添加了一些内容，如错误检查。此示例还使用新的CUDA4.0内核启动驱动程序API。  
 
+### [vectorAddMMAP](./vectorAddMMAP) 
+
+此示例将vectorAddDrv示例中的设备分配替换为cuMemMap-ed分配。此示例演示了cuMemMap api允许用户指定其内存的物理属性，同时保留其访问的连续性，因此不需要更改其程序结构。
