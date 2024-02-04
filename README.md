@@ -1,4 +1,5 @@
-# CUDA 示例中文版        commit id:e8568c417356f7e66bb9b7130d6be7e55324a519     
+# CUDA 示例中文版        
+commit id:e8568c417356f7e66bb9b7130d6be7e55324a519     
 
 CUDA开发人员示例，演示CUDA Toolkit中的功能. 当前版本支持 [CUDA Toolkit 12.3](https://developer.nvidia.com/cuda-downloads).
 
