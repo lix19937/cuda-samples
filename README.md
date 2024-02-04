@@ -74,7 +74,7 @@ $ make
 演示CUDA特性的示例（协作组、CUDA动态并行性、CUDA图等）。   
 
 ### [4. CUDA Libraries](./Samples/4_CUDA_Libraries/README.md)    
-演示如何使用CUDA平台库（NPP、NVJPEG、NVGRAPH cuBLAS、cuDLA、cuFFT、cuSPARSE、cuSOLVER和cuRAND）的示例。    
+演示如何使用CUDA平台库（NPP、NVJPEG、NVGRAPH、cuBLAS、cuDLA、cuFFT、cuSPARSE、cuSOLVER和cuRAND）的示例。    
 
 ### [5. Domain Specific](./Samples/5_Domain_Specific/README.md)
 
