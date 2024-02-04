@@ -1,8 +1,8 @@
-# 4. CUDA Libraries
+# 4. CUDA 相关库
 
 
 ### [batchCUBLAS](./batchCUBLAS)
-CUDA示例，演示如何使用批处理CUBLAS API调用来提高总体性能。 [v]    
+CUDA示例，演示如何使用批处理CUBLAS API 调用来提高总体性能。 [v]    
 
 ### [batchedLabelMarkersAndLabelCompressionNPP](./batchedLabelMarkersAndLabelCompressionNPP)
 An NPP CUDA Sample that demonstrates how to use the NPP label markers generation and label compression functions based on a Union Find (UF) algorithm including both single image and batched image versions.
