@@ -2,7 +2,7 @@
 
 
 ### [batchCUBLAS](./batchCUBLAS)
-A CUDA Sample that demonstrates how using batched CUBLAS API calls to improve overall performance.
+CUDA示例，演示如何使用批处理CUBLAS API调用来提高总体性能。 [v]    
 
 ### [batchedLabelMarkersAndLabelCompressionNPP](./batchedLabelMarkersAndLabelCompressionNPP)
 An NPP CUDA Sample that demonstrates how to use the NPP label markers generation and label compression functions based on a Union Find (UF) algorithm including both single image and batched image versions.
@@ -17,7 +17,7 @@ An NPP CUDA Sample that demonstrates the recommended parameters to use with the 
 This sample implements a conjugate gradient solver on GPU using CUBLAS and CUSPARSE library.
 
 ### [conjugateGradientCudaGraphs](./conjugateGradientCudaGraphs)
-This sample implements a conjugate gradient solver on GPU using CUBLAS and CUSPARSE library calls captured and called using CUDA Graph APIs.
+此示例使用CUBLAS和CUSPARSE库调用在GPU上实现共轭梯度解算器，这些库调用是使用CUDA Graph API捕获和调用的。 [v]
 
 ### [conjugateGradientMultiBlockCG](./conjugateGradientMultiBlockCG)
 This sample implements a conjugate gradient solver on GPU using Multi Block Cooperative Groups, also uses Unified Memory.
@@ -29,24 +29,33 @@ This sample implements a conjugate gradient solver on multiple GPUs using Multi 
 This sample implements a preconditioned conjugate gradient solver on GPU using CUBLAS and CUSPARSE library.
 
 ### [conjugateGradientUM](./conjugateGradientUM)
+
 This sample implements a conjugate gradient solver on GPU using CUBLAS and CUSPARSE library, using Unified Memory
 
 ### [cudaNvSci](./cudaNvSci)
-This sample demonstrates CUDA-NvSciBuf/NvSciSync Interop. Two CPU threads import the NvSciBuf and NvSciSync into CUDA to perform two image processing algorithms on a ppm image - image rotation in 1st thread & rgba to grayscale conversion of rotated image in 2nd thread. Currently only supported on Ubuntu 18.04
+
+此示例演示CUDA NvSciBuf/NvSciSync互操作。两个CPU线程将NvSciBuf和NvSciSync导入CUDA，以对ppm图像执行两种图像处理算法-第一个线程中的图像旋转和第二个线程中旋转图像的rgba到灰度转换。目前仅在Ubuntu 18.04上支持   [v]    
 
 ### [cudaNvSciNvMedia](./cudaNvSciNvMedia)
-This sample demonstrates CUDA-NvMedia interop via NvSciBuf/NvSciSync APIs. Note that this sample only supports cross build from x86_64 to aarch64, aarch64 native build is not supported. For detailed workflow of the sample please check cudaNvSciNvMedia_Readme.pdf in the sample directory.
+
+此示例通过NvSciBuf/NvSciSync API演示CUDA NvMedia互操作。请注意，此示例仅支持从x86_64到aarch64的交叉构建，不支持aarch64本机构建。有关示例的详细工作流程，请查看示例目录中的cudaNvSciNvMedia_Readme.pdf。  
 
 ### [cuDLAErrorReporting](./cuDLAErrorReporting)
-This sample demonstrates how DLA errors can be detected via CUDA.
+
+此示例演示了如何通过CUDA检测DLA错误。
+
 
 ### [cuDLAHybridMode](./cuDLAHybridMode)
-This sample demonstrates cuDLA hybrid mode wherein DLA can be programmed using CUDA.
+
+该示例演示了cuDLA混合模式，其中DLA可以使用CUDA进行编程。
+
 
 ### [cuDLAStandaloneMode](./cuDLAStandaloneMode)
-This sample demonstrates cuDLA standalone mode wherein DLA can be programmed without using CUDA.
+
+此示例演示了cuDLA独立模式，其中可以在不使用CUDA的情况下对DLA进行编程。
 
 ### [cuSolverDn_LinearSolver](./cuSolverDn_LinearSolver)
+
 A CUDA Sample that demonstrates cuSolverDN's LU, QR and Cholesky factorization.
 
 ### [cuSolverRf](./cuSolverRf)
@@ -74,16 +83,21 @@ This CUDA Sample demonstrates how to use NPP for histogram equalization for imag
 This sample is an implementation of a simple line-of-sight algorithm: Given a height map and a ray originating at some observation point, it computes all the points along the ray that are visible from the observation point. The implementation is based on the Thrust library.
 
 ### [matrixMulCUBLAS](./matrixMulCUBLAS)
-This sample implements matrix multiplication from Chapter 3 of the programming guide. To illustrate GPU performance for matrix multiply, this sample also shows how to use the new CUDA 4.0 interface for CUBLAS to demonstrate high-performance performance for matrix multiplication.
+
+此示例实现编程指南第3章中的矩阵乘法。为了说明GPU在矩阵乘法方面的性能，本示例还展示了如何使用CUBLAS的新CUDA 4.0接口来演示矩阵乘法的高性能。
 
 ### [MersenneTwisterGP11213](./MersenneTwisterGP11213)
 This sample demonstrates the Mersenne Twister random number generator GP11213 in cuRAND.
 
 ### [nvJPEG](./nvJPEG)
-A CUDA Sample that demonstrates single and batched decoding of jpeg images using NVJPEG Library.
+
+CUDA示例，演示使用NVJPEG库对jpeg图像进行单次和批量解码。
+
 
 ### [nvJPEG_encoder](./nvJPEG_encoder)
-A CUDA Sample that demonstrates single encoding of jpeg images using NVJPEG Library.
+
+CUDA示例，演示使用NVJPEG库对jpeg图像进行单一编码。
+
 
 ### [oceanFFT](./oceanFFT)
 This sample simulates an Ocean height field using CUFFT Library and renders the result using OpenGL.
