@@ -1,15 +1,20 @@
-# 1. Utilities
-
+# 1. Utilities  
 
 ### [bandwidthTest](./bandwidthTest)
-This is a simple test program to measure the memcopy bandwidth of the GPU and memcpy bandwidth across PCI-e. This test application is capable of measuring device to device copy bandwidth, host to device copy bandwidth for pageable and page-locked memory, and device to host copy bandwidth for pageable and page-locked memory.
+
+这是一个简单的测试程序，用于测量GPU的memcopy带宽和PCI-e上的memcpy带宽。此测试应用程序能够测量设备到设备的复制带宽、可分页和锁页内存的主机到设备的拷贝带宽以及可分页和锁页内存的设备到主机的拷贝带宽。  [v]    
 
 ### [deviceQuery](./deviceQuery)
-This sample enumerates the properties of the CUDA devices present in the system.
 
-### [deviceQueryDrv](./deviceQueryDrv)
-This sample enumerates the properties of the CUDA devices present using CUDA Driver API calls
+此示例列举了系统中存在的CUDA设备的属性      [v]    
+
+### [deviceQueryDrv](./deviceQueryDrv)  
+
+此示例列举使用CUDA驱动程序API调用的CUDA设备的属性   [v]    
 
 ### [topologyQuery](./topologyQuery)
-A simple exemple on how to query the topology of a system with multiple GPU
+
+如何查询具有多个GPU的系统的拓扑结构的简单示例    [v]    
+
+
 
