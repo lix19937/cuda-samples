@@ -144,7 +144,7 @@
 
 ### [simpleStreams](./simpleStreams)
 
-此示例使用CUDA流将内核执行与主机和GPU设备之间的内存副本重叠。此示例使用了一个新的CUDA 4.0功能，该功能支持固定通用主机内存。  [v]    
+此示例使用CUDA流将内核执行与主机和GPU设备之间的内存副本重叠。此示例使用了一个新的CUDA 4.0功能，该功能支持锁定通用主机内存。  [v]    
 
 ### [simpleSurfaceWrite](./simpleSurfaceWrite)
 
