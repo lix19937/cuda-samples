@@ -1,12 +1,14 @@
-# 6. Performance
+# 6. 性能  
 
 
-### [alignedTypes](./alignedTypes)
-A simple test, showing huge access speed gap between aligned and misaligned structures. It measures per-element copy throughput for aligned and misaligned structures on big chunks of data.
+### [alignedTypes](./alignedTypes)    
+一个简单的测试，显示了对齐和未对齐结构之间巨大的访问速度差距。它测量大块数据上对齐和未对齐结构的每个元素拷贝吞吐量。
 
 ### [transpose](./transpose)
-This sample demonstrates Matrix Transpose.  Different performance are shown to achieve high performance.
 
-### [UnifiedMemoryPerf](./UnifiedMemoryPerf)
-This sample demonstrates the performance comparision using matrix multiplication kernel of Unified Memory with/without hints and other types of memory like zero copy buffers, pageable, pagelocked memory performing synchronous and Asynchronous transfers on a single GPU.
+此示例演示矩阵转置。显示了不同的性能以实现高性能。
+
+### [UnifiedMemoryPerf](./UnifiedMemoryPerf)   
+
+此示例演示了使用带/不带提示的统一内存的矩阵乘法内核和其他类型的内存（如零复制缓冲区、可分页、锁页内存）在单个GPU上执行同步和异步传输的性能比较。
 
