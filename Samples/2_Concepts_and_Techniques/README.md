@@ -59,7 +59,7 @@
 
 ### [interval](./interval)
 
-区间算术运算符示例。使用各种C++功能（模板和递归）。递归模式需要Compute SM 2.0功能。
+区间算术运算符示例。使用各种C++功能（模板和递归）。递归模式需要Compute SM 2.0功能。 [v]   
 
 ### [MC_EstimatePiInlineP](./MC_EstimatePiInlineP)
 
@@ -91,7 +91,7 @@
 
 ### [reduction](./reduction)
 
-一种并行求和约简，用于计算大型值数组的和。此示例演示了数据并行算法的几个重要优化策略，如使用共享内存减少、__shfl_down_sync、__reduce_add_sync和cooperative_groups-reduce。  [v]   
+一种并行求和，用于计算大型值数组的和。此示例演示了数据并行算法的几个重要优化策略，如使用共享内存减少、__shfl_down_sync、__reduce_add_sync和cooperative_groups-reduce。  [v]   
 
 ### [reductionMultiBlockCG](./reductionMultiBlockCG) 
 
@@ -131,9 +131,9 @@
 
 ### [threadFenceReduction](./threadFenceReduction)
 
-此示例显示如何使用线程Fence内在函数对值数组执行归约操作，以在单个内核中生成单个值（而不是“归约”CUDA示例中所示的两个或多个内核调用）。单程还原需要全局原子指令（Compute Capability 2.0或更高版本）和_threadfence（）内在指令（CUDA 2.2或更高级别）。 [v]    
+此示例显示如何使用线程Fence内在函数对值数组执行归约操作，以在单个内核中生成单个值（而不是“归约”CUDA示例中所示的两个或多个内核调用）。单程还原需要全局原子指令（Compute Capability 2.0或更高版本）和_threadfence 内在指令（CUDA 2.2或更高级别）。 [v]    
 
 ### [threadMigration](./threadMigration)  
 
-简单的程序说明如何使用CUDA上下文管理API并使用新的CUDA 4.0参数传递和CUDA启动API。CUDA上下文可以单独创建，并独立附加到不同的线程。 [v]    
+说明如何使用CUDA上下文管理API并使用新的CUDA 4.0参数传递和CUDA启动API。CUDA上下文可以单独创建，并独立附加到不同的线程。 [v]    
 
