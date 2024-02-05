@@ -116,7 +116,7 @@
 
 ### [simpleMultiCopy](./simpleMultiCopy)
 
-在具有计算能力1.1的GPU中支持，主机系统可以使用一个memcopy进行重叠计算。对于具有Compute Capability 2.0的Quadro和Tesla GPU，可以全速在任一方向进行第二次重叠复制操作（PCI-e是对称的）。此示例说明了使用CUDA流来实现内核执行与设备之间的数据副本的重叠。  [v]    
+在具有计算能力1.1的GPU中支持，主机系统可以使用一个memcpy进行重叠计算。对于具有Compute Capability 2.0的Quadro和Tesla GPU，可以全速在任一方向进行第二次重叠复制操作（PCI-e是对称的）。此示例说明了使用CUDA流来实现内核执行与设备之间的数据副本的重叠。  [v]    
 
 ### [simpleMultiGPU](./simpleMultiGPU)
 
@@ -128,7 +128,7 @@
 
 ### [simpleP2P](./simpleP2P)
 
-此应用程序演示了CUDA API，这些API支持多个GPU之间的对等（P2P）拷贝、对等（对等）寻址和统一虚拟内存寻址（UVA）。一般来说，P2P在两个相同的GPU之间得到支持，但也有一些例外，例如一些特斯拉和Quadro GPU。  [v]    
+此应用程序演示了CUDA API，这些API支持多个GPU之间的对等（P2P）拷贝、寻址和统一虚拟内存寻址（UVA）。一般来说，P2P在两个相同的GPU之间得到支持，但也有一些例外，例如一些特斯拉和Quadro GPU。  [v]    
 
 ### [simplePitchLinearTexture](./simplePitchLinearTexture)
 
