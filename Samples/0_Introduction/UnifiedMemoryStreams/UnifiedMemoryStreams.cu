@@ -144,8 +144,8 @@ void *execute(void *inpArgs) {
       printf("Task [%d], thread [%d] executing on host (%d)\n", t.id, tid,
              t.size);
 
-      // attach managed memory to a (dummy) stream to allow host access while
-      // the device is running
+      // attach managed memory to a (dummy) stream to allow host access while the device is running
+      // cudaStreamAttachMemAsync 将统一内存关联到stream  
       checkCudaErrors(
           cudaStreamAttachMemAsync(stream[0], t.data, 0, cudaMemAttachHost));
       checkCudaErrors(
@@ -154,8 +154,10 @@ void *execute(void *inpArgs) {
           cudaStreamAttachMemAsync(stream[0], t.result, 0, cudaMemAttachHost));
       // necessary to ensure Async cudaStreamAttachMemAsync calls have finished
       checkCudaErrors(cudaStreamSynchronize(stream[0]));
+
       // call the host operation
       gemv(t.size, t.size, 1.0, t.data, t.vector, 0.0, t.result);
+
     } else {
       // perform on device
       printf("Task [%d], thread [%d] executing on device (%d)\n", t.id, tid,
