@@ -1,4 +1,4 @@
-# 5. Domain Specific
+# 5. 特定领域    
 
 
 ### [bicubicTexture](./bicubicTexture)
@@ -153,3 +153,6 @@ This sample demonstrates basic volume rendering using 3D Textures.
 ### [vulkanImageCUDA](./vulkanImageCUDA)
 This sample demonstrates Vulkan Image - CUDA Interop. CUDA imports the Vulkan image buffer, performs box filtering over it, and synchronizes with Vulkan through vulkan semaphores imported by CUDA. This sample depends on Vulkan SDK, GLFW3 libraries, for building this sample please refer to "Build_instructions.txt" provided in this sample's directory
 
+---------------------------------  
+
+本章节实际应用较少， @by lix19937    
