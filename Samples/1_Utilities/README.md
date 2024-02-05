@@ -2,7 +2,7 @@
 
 ### [bandwidthTest](./bandwidthTest)
 
-这是一个简单的测试程序，用于测量GPU的memcopy带宽和PCI-e上的memcpy带宽。此测试应用程序能够测量设备到设备的复制带宽、可分页和锁页内存的主机到设备的拷贝带宽以及可分页和锁页内存的设备到主机的拷贝带宽。  [v]    
+用于测量GPU的memcopy带宽和PCI-e上的memcpy带宽。此测试应用程序能够测量**设备到设备的拷贝带宽、可分页和锁页内存的主机到设备的拷贝带宽以及可分页和锁页内存的设备到主机的拷贝带宽**。  [v]    
 
 ### [deviceQuery](./deviceQuery)
 
