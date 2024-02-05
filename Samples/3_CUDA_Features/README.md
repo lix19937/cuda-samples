@@ -41,11 +41,11 @@ CUDA示例演示了使用CUDA 9中引入的Warp Matrix Multiply and Accumulate�
 
 此示例演示了新CUDA WMMA API的使用，该API采用Volta芯片系列中引入的Tensor核心，以实现更快的矩阵运算。
 
-除此之外，它还演示了新的CUDA函数属性cudaFuncAttributeMaxDynamicSharedMemorySize的使用，该属性允许应用程序保留比默认情况下更多的共享内存。
+除此之外，它还演示了新的CUDA函数属性cudaFuncAttributeMaxDynamicSharedMemorySize的使用，该属性允许应用程序保留比默认情况下更多的共享内存。 [v]   
 
 ### [dmmaTensorCoreGemm](./dmmaTensorCoreGemm)
 
-演示了双精度GEMM计算，该计算使用双精度Warp Matrix Multiply and Accumulate（WMMA）API在Ampere芯片族张量核中与CUDA 11一起引入，以实现更快的矩阵运算。此示例还使用了cuda pipeline 接口为gmem到shmem异步加载提供的异步副本，这提高了内核性能并减少了寄存器压力。此外，此示例还演示了如何在组上使用协作组异步复制接口来执行gmem到shmem异步加载。
+演示了双精度GEMM计算，该计算使用双精度Warp Matrix Multiply and Accumulate（WMMA）API在Ampere芯片族张量核中与CUDA 11一起引入，以实现更快的矩阵运算。此示例还使用了cuda pipeline 接口为gmem到shmem异步加载提供的异步副本，这提高了内核性能并减少了寄存器压力。此外，此示例还演示了如何在组上使用协作组异步复制接口来执行gmem到shmem异步加载。 [v]   
 
 ### [globalToShmemAsyncCopy](./globalToShmemAsyncCopy) 
 
@@ -60,7 +60,7 @@ CUDA示例演示了使用CUDA 9中引入的Warp Matrix Multiply and Accumulate�
 
 ### [immaTensorCoreGemm](./immaTensorCoreGemm)
 
-CUDA示例演示了使用CUDA 10中引入的用于整数的Warp Matrix Multiply and Accumulate（WMMA）API进行整数GEMM计算。此示例演示了CUDA WMMA API的使用，该API采用Volta芯片系列中引入的Tensor核心来实现更快的矩阵运算。除此之外，它还演示了新的CUDA函数属性cudaFuncAttributeMaxDynamicSharedMemorySize的使用，该属性允许应用程序保留比默认情况下更多的共享内存。
+CUDA示例演示了使用CUDA 10中引入的用于整数的Warp Matrix Multiply and Accumulate（WMMA）API进行整数GEMM计算。此示例演示了CUDA WMMA API的使用，该API采用Volta芯片系列中引入的Tensor核心来实现更快的矩阵运算。除此之外，它还演示了新的CUDA函数属性cudaFuncAttributeMaxDynamicSharedMemorySize的使用，该属性允许应用程序保留比默认情况下更多的共享内存。 [v]   
 
 ### [jacobiCudaGraphs](./jacobiCudaGraphs)
 
@@ -72,7 +72,7 @@ CUDA示例演示了使用CUDA 10中引入的用于整数的Warp Matrix Multiply 
 
 ### [newdelete](./newdelete)
 
-此示例演示了通过CUDA 4.0提供的设备C++new和delete运算符以及虚拟函数声明进行的动态全局内存分配。 
+此示例演示了通过CUDA 4.0提供的设备C++new和delete运算符以及虚拟函数声明进行的动态全局内存分配。  [v]   
 
 ### [ptxjit](./ptxjit)
 
@@ -80,15 +80,15 @@ CUDA示例演示了使用CUDA 10中引入的用于整数的Warp Matrix Multiply 
 
 ### [simpleCudaGraphs](./simpleCudaGraphs)
 
-使用Graphs API和Stream Capture API演示CUDA Graphs的创建、实例化和启动。
+使用Graphs API和Stream Capture API演示CUDA Graphs的创建、实例化和启动。 [v]   
 
 ### [StreamPriorities](./StreamPriorities)
 
-此示例演示流优先级的基本用法。 [v]   
+此示例演示**流优先级** 的基本用法。 [v]   
 
 ### [tf32TensorCoreGemm](./tf32TensorCoreGemm)
 
-CUDA样本演示了tf32（e8m10）GEMM计算，该计算使用了Ampere芯片系列张量核中CUDA11引入的Warp Matrix Multiply and Accumulate（WMMA）API，以实现更快的矩阵运算。此示例还使用了cuda管道接口为gmem到shmem异步加载提供的异步副本，这提高了内核性能并减少了寄存器压力。
+CUDA样本演示了tf32（e8m10）GEMM 计算，该计算使用了Ampere芯片系列张量核中CUDA11引入的 Warp Matrix Multiply and Accumulate（WMMA）API，以实现更快的矩阵运算。此示例还使用了cuda pipeline 接口为gmem到shmem异步加载提供的异步副本，这提高了内核性能并减少了寄存器压力。 [v]   
 
 ### [warpAggregatedAtomicsCG](./warpAggregatedAtomicsCG)   
 
