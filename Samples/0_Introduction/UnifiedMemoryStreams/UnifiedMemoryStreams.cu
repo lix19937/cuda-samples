@@ -67,12 +67,11 @@ struct Task {
 
   Task() : size(0), id(0), data(NULL), result(NULL), vector(NULL){};
   Task(unsigned int s) : size(s), id(0), data(NULL), result(NULL) {
-    // allocate unified memory -- the operation performed in this example will
-    // be a DGEMV
+    // allocate unified memory -- the operation performed in this example will be a DGEMV
     checkCudaErrors(cudaMallocManaged(&data, sizeof(T) * size * size));
     checkCudaErrors(cudaMallocManaged(&result, sizeof(T) * size));
     checkCudaErrors(cudaMallocManaged(&vector, sizeof(T) * size));
-    checkCudaErrors(cudaDeviceSynchronize());
+    checkCudaErrors(cudaDeviceSynchronize()); /// 比较重的sync   
   }
 
   ~Task() {
@@ -242,13 +241,14 @@ int main(int argc, char **argv) {
   int dev_id = findCudaDevice(argc, (const char **)argv);
   checkCudaErrors(cudaGetDeviceProperties(&device_prop, dev_id));
 
+  // 判断是否支持 统一内存   
   if (!device_prop.managedMemory) {
-    // This samples requires being run on a device that supports Unified Memory
     fprintf(stderr, "Unified Memory not supported on this device\n");
 
     exit(EXIT_WAIVED);
   }
 
+  // 此示例需要使用默认模式或 进程独占模式 运行
   if (device_prop.computeMode == cudaComputeModeProhibited) {
     // This sample requires being run with a default or process exclusive mode
     fprintf(stderr,
