@@ -1,7 +1,7 @@
 # 3. CUDA 特性  
 
 ### [bf16TensorCoreGemm](./bf16TensorCoreGemm)
-演示了__nv_bfloat16（e8m7）GEMM计算，该计算使用了Ampere芯片系列张量核中CUDA 11引入的Warp Matrix Multiply and Accumulate（WMMA）API，以实现更快的矩阵运算。此示例还使用了cuda管道接口为gmem到shmem异步加载提供的异步副本，这提高了内核性能并减少了寄存器压力。  [v]   
+演示了 __nv_bfloat16（e8m7）GEMM 计算，该计算使用了Ampere芯片系列张量核中CUDA 11引入的 arp Matrix Multiply and Accumulate（WMMA）API，以实现更快的矩阵运算。此示例还使用了cuda pipeline 接口为gmem到shmem异步加载提供的异步副本，这提高了内核性能并减少了寄存器压力。  [v]   
 
 ### [binaryPartitionCG](./binaryPartitionCG)
 
