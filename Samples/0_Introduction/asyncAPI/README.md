@@ -2,11 +2,7 @@
 
 ## Description
 
-This sample illustrates the usage of CUDA events for both GPU timing and overlapping CPU and GPU execution. Events are inserted into a stream of CUDA calls. Since CUDA stream calls are asynchronous, the CPU can perform computations while GPU is executing (including DMA memcopies between the host and device). CPU can query CUDA events to determine whether GPU has completed tasks.
-
-## Key Concepts
-
-Asynchronous Data Transfers, CUDA Streams and Events
+此示例说明了CUDA事件在GPU计时以及CPU和GPU执行重叠时的使用情况。事件被插入到CUDA调用流中。由于CUDA流调用是异步的，CPU可以在GPU执行时执行计算（包括主机和设备之间的DMA内存复制）。CPU可以查询CUDA事件以确定GPU是否已完成任务。
 
 ## Supported SM Architectures
 
