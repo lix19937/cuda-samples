@@ -107,9 +107,11 @@ int main(int argc, char *argv[]) {
   checkCudaErrors(cudaProfilerStart());
   sdkStartTimer(&timer);
   cudaEventRecord(start, 0);
+
   cudaMemcpyAsync(d_a, a, nbytes, cudaMemcpyHostToDevice, 0);
   increment_kernel<<<blocks, threads, 0, 0>>>(d_a, value);
   cudaMemcpyAsync(a, d_a, nbytes, cudaMemcpyDeviceToHost, 0);
+
   cudaEventRecord(stop, 0);
   sdkStopTimer(&timer);
   checkCudaErrors(cudaProfilerStop());
@@ -126,8 +128,7 @@ int main(int argc, char *argv[]) {
   // print the cpu and gpu times
   printf("time spent executing by the GPU: %.2f\n", gpu_time);
   printf("time spent by CPU in CUDA calls: %.2f\n", sdkGetTimerValue(&timer));
-  printf("CPU executed %lu iterations while waiting for GPU to finish\n",
-         counter);
+  printf("CPU executed %lu iterations while waiting for GPU to finish\n", counter);
 
   // check the output for correctness
   bool bFinalResults = correct_output(a, n, value);
