@@ -61,6 +61,7 @@ const char *sSDKname = "UnifiedMemoryStreams";
 template <typename T>
 struct Task {
   unsigned int size, id;
+
   T *data;
   T *result;
   T *vector;
@@ -71,12 +72,14 @@ struct Task {
     checkCudaErrors(cudaMallocManaged(&data, sizeof(T) * size * size));
     checkCudaErrors(cudaMallocManaged(&result, sizeof(T) * size));
     checkCudaErrors(cudaMallocManaged(&vector, sizeof(T) * size));
+
     checkCudaErrors(cudaDeviceSynchronize()); /// 比较重的sync   
   }
 
   ~Task() {
     // ensure all memory is deallocated
     checkCudaErrors(cudaDeviceSynchronize());
+
     checkCudaErrors(cudaFree(data));
     checkCudaErrors(cudaFree(result));
     checkCudaErrors(cudaFree(vector));
@@ -103,6 +106,7 @@ struct Task {
   }
 };
 
+////////----------------------------------------------------
 #ifdef USE_PTHREADS
 struct threadData_t {
   int tid;
@@ -141,17 +145,14 @@ void *execute(void *inpArgs) {
 
     if (t.size < 100) {
       // perform on host
-      printf("Task [%d], thread [%d] executing on host (%d)\n", t.id, tid,
-             t.size);
+      printf("Task [%d], thread [%d] executing on host (%d)\n", t.id, tid, t.size);
 
       // attach managed memory to a (dummy) stream to allow host access while the device is running
       // cudaStreamAttachMemAsync 将统一内存关联到stream  
-      checkCudaErrors(
-          cudaStreamAttachMemAsync(stream[0], t.data, 0, cudaMemAttachHost));
-      checkCudaErrors(
-          cudaStreamAttachMemAsync(stream[0], t.vector, 0, cudaMemAttachHost));
-      checkCudaErrors(
-          cudaStreamAttachMemAsync(stream[0], t.result, 0, cudaMemAttachHost));
+      checkCudaErrors(cudaStreamAttachMemAsync(stream[0], t.data, 0, cudaMemAttachHost));
+      checkCudaErrors(cudaStreamAttachMemAsync(stream[0], t.vector, 0, cudaMemAttachHost));
+      checkCudaErrors(cudaStreamAttachMemAsync(stream[0], t.result, 0, cudaMemAttachHost));
+
       // necessary to ensure Async cudaStreamAttachMemAsync calls have finished
       checkCudaErrors(cudaStreamSynchronize(stream[0]));
 
