@@ -1,7 +1,9 @@
 # CUDA 示例中文版        
 > commit id:e8568c417356f7e66bb9b7130d6be7e55324a519     
-> 尽量知晓cuda的方方面面，为部署加速再上一层楼！     
-> [v] 为lix19937 标注    
+> 尽量知晓cuda的方方面面，为部署加速再上一层楼！      
+> [v] 为lix19937 标注
+> 不为知晓一切，但求知道方向或路径！
+> 
 ----------------------------------
 
 CUDA开发人员示例，演示CUDA Toolkit中的功能. 当前版本支持 [CUDA Toolkit 12.3](https://developer.nvidia.com/cuda-downloads).
